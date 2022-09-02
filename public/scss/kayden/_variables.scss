@@ -1,0 +1,186 @@
+$var-prefix: kayden;
+
+$buttons-variants : 'primary';
+
+$colors_palettes : (
+    "color1" : (
+        "primary" : rgb(49, 108, 226),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(49, 108, 226),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(49, 108, 226)
+    ),
+    "color2" : (
+        "primary" : rgb(142, 140, 216),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(142, 140, 216),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(142, 140, 216)
+    ),
+    "color3" : (
+        "primary" : rgb(116, 77, 169),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(116, 77, 169),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(116, 77, 169)
+    ),
+    "color4" : (
+        "primary" : rgb(136, 23, 152),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(136, 23, 152),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(136, 23, 152)
+    ),
+    "color5" : (
+        "primary" : rgb(255, 185, 0),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(255, 185, 0),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(255, 185, 0)
+    ),
+    "color6" : (
+        "primary" : rgb(238, 159, 42),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(238, 159, 42),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(238, 159, 42)
+    ),
+    "color7" : (
+        "primary" : rgb(199, 40, 40),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(199, 40, 40),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(199, 40, 40)
+    ),
+    "color8" : (
+        "primary" : rgb(255, 67, 67),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(255, 67, 67),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(255, 67, 67)
+    ),
+    "color9" : (
+        "primary" : rgb(5, 131, 120),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(5, 131, 120),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(5, 131, 120)
+    ),
+    "color10" : (
+        "primary" : rgb(72, 104, 96),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(72, 104, 96),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(72, 104, 96)
+    ),
+    "color11" : (
+        "primary" : rgb(25, 135, 84),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(25, 135, 84),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(25, 135, 84)
+    ),
+    "color12" : (
+        "primary" : rgb(13, 201, 145),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(13, 201, 145),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(13, 201, 145)
+    ),
+    
+    "color13" : (
+        "primary" : rgb(81, 92, 107),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(81, 92, 107),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(81, 92, 107)
+    ),
+    "color14" : (
+        "primary" : rgb(34, 34, 34),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(34, 34, 34),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(34, 34, 34)
+    ),
+    "color15" : (
+        "primary" : rgb(221, 230, 227),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(221, 230, 227),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(221, 230, 227)
+    ),
+    "color16" : (
+        "primary" : rgb(44, 101, 125),
+        "buttons" : (
+            "primary" : (
+                "background" : rgb(44, 101, 125),
+                "text" : rgb(255,255,255),
+                "box-shadow" : none
+            )
+        ),
+        "border" : rgb(44, 101, 125)
+    )
+);
+
+
+$layouts: "dark", "light";

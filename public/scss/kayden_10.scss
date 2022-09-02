@@ -1,0 +1,344 @@
+/*----------------------------------------------------------------------------------------------
+* Template Name      :  Kayden - Personal Bootstrap 5 HTML Portfolio Template                   |
+* Author             :  Narek Sukiasyan                                                         |
+* Version            :  1.0.0                                                                   |
+* Created            :  May 2021                                                                |
+* Updated            :  June 2021                                                               |
+* File Description   :  Main stylesheet file of the template                                    |
+*-----------------------------------------------------------------------------------------------
+*/
+
+/******************
+Table of Content
+    
+    1. Bootstrap 5
+    2. Root
+    3. Reboot
+    4. Settings
+        4.1 General Settings
+        4.2 Section Settings
+        4.3 OWL Carousel Settings
+        4.4 Magnific Popup fade effect
+    5. Keyframes
+    6. Helpers
+        6.1 Custom Spacing for Testimonial Thumnails
+        6.2 Small Font Size
+        6.3 Shadow Image
+        6.4 Portfolio Image
+        6.5 Image Fit Helpers
+        6.6 Underline Animation on Hover
+        6.7 Font Family Secondary
+        6.8 Preloader
+        6.9 Custom Alert
+    7. Utilities
+        7.1 Scroll Down Button
+        7.2 Social Links List 
+        7.3 Gradient Grid
+    8. Header
+        8.1 Header
+        8.2 Menu Toggler
+        8.3 Off Canvas
+        8.4 Header Media Breakpoint
+    9. Addons
+        9.1 Fancy Border Animation
+        9.2 Video and Home Background Overlay
+    10. Buttons
+
+******************/
+
+
+
+/*===================
+    1. Bootstrap 5
+====================*/
+// Include bootstrap functions.
+@import 'bootstrap/functions';
+
+//------------------------------------------
+//Overrides default variables of bootstrap.
+//------------------------------------------
+
+//Current Layout 
+
+$current-layout: 'dark';
+
+//------------------------------------
+//-----Set your prefer color here-----
+
+
+
+
+//Body Colors
+$body-bg: #01010D;
+$body-color: #fff;
+
+//Border Colors ( Used on all borders and gradient grids )
+$kd_border-color: false;
+
+//Preloader wrapper background color
+
+$preloader-bg: rgba($body-color, .15);
+
+//Secondary Color ( Used at Secondary Section Background color )
+$section-primary-bg: #316CE2;
+$section-primary-color: #E9F1FF;
+
+$section-secondary-bg: #000c1b;
+$section-secondary-color: #fff;
+
+//Secondary ( Bootstrtap Secondary Color )
+$secondary: #6f737b;
+
+//Border Colors ( Used on all borders and gradient grids )
+$border-color: #316CE2;
+
+//Custom Color ( Used on list group )
+$border-secondary-color: #2f2f2f;
+
+//Secondary Font FAMILY
+$font-family-secondary: 'Open Sans', sans-serif;
+
+
+//Image
+$kayden-img-radius: 10px;
+
+//Disable smooth scroll
+$enable-smooth-scroll: false;
+
+//Font Sizes
+$font-size-base: 1rem;
+
+//Heading Sizes
+$h1-font-size: $font-size-base * 5;
+$h2-font-size: $font-size-base * 4;
+$h3-font-size: $font-size-base * 2.5;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+//Border Settings
+$border-radius-sm: .3rem;
+$border-radius-lg: .625rem;
+
+//List Group
+
+$list-group-color: $body-color;
+$list-group-bg: $body-bg;
+$list-group-border-color: $border-secondary-color;
+
+$list-group-item-padding-y: 1rem;
+
+
+//Progress bar transition
+$progress-bar-transition: width 1.5s ease-in-out;
+
+//Accourdion button box shadow on focus
+$accordion-button-focus-box-shadow: none;
+
+//----------------------------------------------------
+// Include remainder of required Bootstrap stylesheets
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+@import "bootstrap/utilities";
+@import 'kayden/variables';
+
+//----------------------------------------------------
+//Including optional Bootstrap components
+@import 'bootstrap/root';
+@import 'kayden/root';
+
+//----------------------------------------------------
+// Overriding Root
+:root {
+    --bs-font-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+//Link Settings
+$link-color: #316CE2;
+$link-decoration: none;
+$link-hover-color: #2860cf;
+$link-hover-decoration: none;
+
+//Button Override
+$btn-padding-y: 0.6rem; 
+$btn-padding-x: 1.7rem; 
+$btn-font-size: 1rem; 
+$btn-border-radius: 100rem;
+
+//Button LG
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2rem; 
+$btn-font-size-lg: 1.125rem;
+$btn-border-radius-lg: 100rem;
+
+//Button SM
+$btn-padding-y-sm: 0.5rem;
+$btn-padding-x-sm: 1rem;
+$btn-font-size-sm: 0.75rem;
+$btn-border-radius-sm: 100rem;
+
+//Off Canvas
+$offcanvas-border-width: 0;
+$offcanvas-bg-color: $body-bg;
+
+
+
+//-----------------------------------
+//Importing Bootstrap Components
+@import 'bootstrap/reboot';
+@import 'bootstrap/type';
+@import 'bootstrap/images';
+@import 'bootstrap/containers';
+@import 'bootstrap/grid';
+@import 'bootstrap/buttons';
+//-----------------------------------
+//Bootstrap Modules that DONT USED IN DEFAULT kayden TEMPLATE 
+//--------||-------------------------------------------------
+//--------\/-------------------------------------------------
+@import 'bootstrap/dropdown';
+@import 'bootstrap/button-group';
+@import 'bootstrap/nav';
+@import 'bootstrap/navbar';
+@import 'bootstrap/card';
+@import 'bootstrap/breadcrumb';
+@import 'bootstrap/pagination';
+@import 'bootstrap/badge';
+@import 'bootstrap/alert';
+@import 'bootstrap/list-group';
+@import 'bootstrap/close';
+@import 'bootstrap/toasts';
+@import 'bootstrap/tooltip';
+@import 'bootstrap/popover';
+@import 'bootstrap/carousel';
+@import 'bootstrap/spinners';
+
+
+
+
+//---------------------------------------
+//Bootstrap Form Settings
+$input-padding-y: .75rem;
+$input-padding-x: 2.1875rem;
+$input-bg: $body-bg;
+$input-border-color: $border-color;
+$input-border-radius: 25px;
+$input-focus-color: $body-bg;
+
+//---------------------------------------
+//Importing Bootstrap Form
+@import 'bootstrap/forms';
+
+//Bootstrap Table Settings
+$table-cell-padding-y: 4.5rem;
+$table-cell-padding-x: 0rem;
+
+//---------------------------------------
+//Importing Bootstrap Table
+@import 'bootstrap/tables';
+
+//---------------------------------------
+//Progress Bar Settings
+$progress-border-radius: 5rem;
+$progress-height: .6rem;
+
+//---------------------------------------
+//Importing Progress Bar-----------------
+@import 'bootstrap/progress';
+
+//---------------------------------------
+//Importing Helpers
+@import "bootstrap/helpers";
+
+//---------------------------------------
+//Importing Bootstrap Transitions
+@import 'bootstrap/transitions';
+
+//---------------------------------------
+//Bootstrap Accordion Settings
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+$accordion-button-color: $secondary;
+$accordion-button-active-color: $body-color;
+
+$accordion-button-active-bg: $body-bg;
+$accordion-border-color: $secondary;
+$accordion-border-width: 0;
+
+$accordion-button-padding-y: 1.5rem;
+
+//---------------------------------------
+//Importing Bootstrap Accordion
+@import 'bootstrap/accordion';
+
+//---------------------------------------
+//Importing Bootstrap Utilities API
+@import "bootstrap/utilities/api";
+
+//---------------------------------------
+//Importing Bootstrap OffCanvas
+@import 'bootstrap/offcanvas';
+//---------------------------------------
+//Importing Bootstrap Modal
+@import 'bootstrap/modal';
+
+//----------------------------------------
+//--CUSTOM SCSS FILES---------------------
+//----------------------------------------
+
+//---------------------------------------
+// Importing kayden Mixins
+@import 'kayden/mixins';
+
+//---------------------------------------
+// Importing kayden Keyframes
+@import 'kayden/keyframes';
+
+//---------------------------------------
+// Importing kayden Reboot
+@import 'kayden/reboot';
+
+//---------------------------------------
+// Importing kayden Settings
+@import 'kayden/settings';
+
+//---------------------------------------
+// Importing kayden Text
+
+$underline-text-height: 5px;
+
+@import 'kayden/text';
+
+//---------------------------------------
+// Importing kayden Keyframes
+@import 'kayden/keyframes';
+
+//---------------------------------------
+// Importing kayden Helpers
+@import 'kayden/helpers';
+
+//---------------------------------------
+// Importing kayden Utilities
+@import 'kayden/utilities';
+
+//---------------------------------------
+// Importing kayden Buttons
+@import 'kayden/buttons';
+
+//---------------------------------------
+// Importing kayden Header
+@import 'kayden/header';
+
+
+//Video Background overlay
+
+$home-overlay: linear-gradient(180deg, rgba(0, 0, 0,.3) 50%, rgba(0, 0, 0, 1) 100%);
+
+// Importing kayden Addons
+@import 'kayden/addons';
+
+//Switcher Delete on Production
+
+@import 'kayden/switcher';

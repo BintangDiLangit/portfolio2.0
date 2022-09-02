@@ -1,0 +1,36 @@
+/*===================
+    5. Keyframes
+====================*/
+
+@keyframes shadowAnimation {
+    0% {
+        box-shadow: 32px 26px 36px var(--#{$var-prefix}-shadow-animation);
+    }
+    100% {
+        box-shadow: 52px 46px 56px var(--#{$var-prefix}-shadow-animation);
+    }
+}
+
+@keyframes scroll {
+    0% {
+      top: 4px;
+      opacity: 1;
+    }
+    100% {
+      top: 21px;
+      opacity: 0;
+    }
+}
+
+@keyframes loader {
+  0% {
+     background: var(--#{$var-prefix}-primary);
+     transform: scale(0);
+  }
+  100%{
+
+      background: $body-bg;
+  }
+}
+
+

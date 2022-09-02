@@ -1,0 +1,241 @@
+/*==========================
+    14. SWITCHER SECTION
+===========================*/
+
+#color-switcher {
+    position: fixed;
+    top: 20%;
+    left: -250px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    &.open-switcher {
+      left: 0px;
+    }
+
+    a.switch-layout {
+        border: 1px solid $body-color;
+
+        &.active {
+            background-color: $body-color;
+            color: $body-bg;
+        }
+    }
+  
+    .switcher-button {
+      color: #fff;
+      font-size: 1.5em;
+      padding: 1rem;
+      cursor: pointer;
+      width: 55px;
+      height: 55px;
+      line-height: 21px;
+      background-color: var(--#{$var-prefix}-primary);
+      i {
+        animation: kaydenswanim 3s infinite linear;
+      }
+    }
+  
+    .switcher-area {
+      padding: 15px 25px;
+      width: 250px;
+      background-color: $body-bg;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  
+      h3 {
+        font-size: 1em;
+      }
+
+      ul.switcher-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+        margin: 2px;
+          a.swtich-color {
+            display: block;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            position: relative;
+
+            &.active,
+            &:hover {
+                border: 2px solid #000000;
+            }
+
+            &.active {
+                &:before {
+                    content: '\f00c';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 700;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    background: #000000;
+                    color: #fff;
+                    font-size: 11px;
+                }
+            }
+          }
+  
+          a.switch-layout {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      @each $color, $settings in $colors_palettes {
+        .#{$color} {
+            background-color: #{map-get($settings, 'primary')};
+            border: 2px solid #{map-get($settings, 'primary')};
+          }
+      }
+  
+      
+      
+    }
+  }
+  
+
+@keyframes kaydenswanim {
+    0% {
+        transform:rotate(0deg)
+    }
+    100% {
+        transform:rotate(359deg)
+    }
+}
+
+
+.kd_switch {
+    position: relative;
+    display: block;
+    padding-left: 45px;
+    cursor: pointer;
+
+    input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+}
+
+
+.kd_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 45px;
+    height: 25px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 19px;
+        width: 19px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+
+input:checked + .kd_slider {
+    background-color: var(--#{$var-prefix}-primary);
+}
+  
+input:focus + .kd_slider {
+    box-shadow: 0 0 1px var(--#{$var-prefix}-primary);
+}
+
+
+input:checked + .kd_slider:before {
+    transform: translateX(20px);
+}
+
+
+.kd_t {
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+
+.kt_radio_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.kt_radio_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+
+.kt_radio_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+.kt_radio_container:hover input ~ .kt_radio_checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.kt_radio_container input:checked ~ .kt_radio_checkmark {
+    background-color: var(--#{$var-prefix}-primary);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.kt_radio_checkmark:after {
+content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.kt_radio_container input:checked ~ .kt_radio_checkmark:after {
+    display: block;
+}
+  
+/* Style the indicator (dot/circle) */
+.kt_radio_container .kt_radio_checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}

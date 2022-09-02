@@ -1,0 +1,58 @@
+@each $breakpoint in map-keys($grid-breakpoints)
+{
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .kayden-underline#{$infix}-right{
+            position: relative;
+            &:after {
+                content: "";
+                background-color: var(--#{$var-prefix}-primary);
+                height: $underline-text-height;
+                width: 80%;
+                position: absolute;
+                left: auto;
+                right: 0;
+                bottom: -.75rem;
+                transform: translateX(0);
+            }
+        }
+
+        .kayden-underline#{$infix}-left{
+            position: relative;
+            &:after {
+                content: "";
+                background-color: var(--#{$var-prefix}-primary);
+                height: $underline-text-height;
+                width: 80%;
+                position: absolute;
+                right: auto;
+                left: 0;
+                bottom: -.75rem;
+                transform: translateX(0);
+            }
+        }
+
+        .kayden-underline#{$infix}-center{
+            position: relative;
+            &:after {
+                content: "";
+                background-color: var(--#{$var-prefix}-primary);
+                height: $underline-text-height;
+                width: 80%;
+                position: absolute;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -.75rem;
+            }
+        }
+        
+        .kayden-underline#{$infix}-big
+        {
+            &:after {
+                bottom: -3.125rem !important;
+            }
+        }
+    }
+}

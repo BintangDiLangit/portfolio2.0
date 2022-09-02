@@ -1,0 +1,96 @@
+/*===================
+    8. Header
+====================*/
+
+
+/* 8.1 Header */
+header.kayden-header {
+
+    .header-inside {
+        padding: 2.25rem 3.125rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $body-bg;
+        @include slowBackgroundTransition;
+
+        &.transparent_header {
+            background-color: transparent;
+        }
+
+        .kayden-menu-toggler, .kayden-nav-meta {
+            width: 20%;
+        }
+    }
+
+    
+}
+
+
+/* 8.2 Menu Toggler */
+
+.kayden-toggler {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: $body-color;
+    @include defaultTransition;
+
+    .kt-r {
+        margin-right: 15px;
+        span {
+            background-color: $body-color;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 7px;
+            display: block;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .kt-t {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+}
+
+
+/* 8.3 Off Canvas */
+
+.offcanvas-header .btn-close
+{
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 2rem;
+    width: 1em;
+    height: 1.4em;
+    opacity: 1;
+    @include defaultTransition();
+    box-shadow: none;
+
+}
+
+.kayden-offcanvas-nav-container {
+    height: calc(100% - 80px);
+}
+
+
+/* 8.4 Header Media Breakpoint */
+
+@include media-breakpoint-down(sm)
+{
+    header.kayden-header {
+        .header-inside  {
+            padding: 2.25rem 1.875rem;
+        }
+        
+    }
+}

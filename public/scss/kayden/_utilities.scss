@@ -1,0 +1,262 @@
+/*===================
+    7. Utilities
+====================*/
+
+/* 7.1 Scroll Down Button */
+.scroll-down {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+    a {
+      display: block;
+      color: $body-color;
+    }
+    .scroll-title {
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .scroll-mouse {
+      width: 30px;
+      height: 50px;
+      border-radius: 20px;
+      position: relative;
+      display: inline-block;
+      border: 2px solid $body-color;
+      .whell {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 4px;
+        animation: scroll 1s linear 0.5s infinite backwards;
+        background-color: $body-color;
+      }
+    }
+}
+
+/* 7.2 Social Links List */
+.social-links li a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  font-size: 1rem;
+  line-height: 45px;
+  text-align: center;
+  color: $white;
+  border-radius: 50%;
+  background-color: var(--#{$var-prefix}-primary);
+  box-shadow: 0px 0px 30px var(--#{$var-prefix}-social-shadow);
+  @include defaultTransition;
+
+  &:hover {
+      box-shadow: 0px 0px 45px var(--#{$var-prefix}-social-shadow-hover);
+  }
+}
+
+/* 7.3 Gradient Grid */
+.kayden-gradient-grid {
+
+  .row {
+      [class^="col-"]
+      {
+          &:before {
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+          }
+
+          &:after {
+              width: 2px;
+              height: 100%;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+          }
+      } 
+  }
+  
+  .row:first-child {
+
+      [class^="col-"]:not(:last-child) {
+          &:after {
+              content: "";
+              background: linear-gradient(0deg, var(--#{$var-prefix}-border) 40%, var(--#{$var-prefix}-border-gradient) 100%);
+          }
+      }
+
+      [class^="col-"]:before {
+          content: "";
+          background: var(--#{$var-prefix}-border);
+      }
+
+  }
+
+  .row:last-child {
+      [class^="col-"]:first-child {
+          &:before {
+              content: none;
+          }
+      }
+
+      [class^="col-"]:not(:last-child) {
+          &:after {
+              content: "";
+              background: linear-gradient(180deg, var(--#{$var-prefix}-border) 40%, var(--#{$var-prefix}-border-gradient) 100%);
+          }
+      }
+
+      [class^="col-"]:last-child {
+          &:before {
+              content: none;
+          }
+      }
+
+      [class^="col-"]:before {
+          content: none;
+      }
+  }
+
+  .row {
+      
+      [class^="col-"]
+      {
+          position: relative;
+      }
+
+      [class^="col-"]:first-child {
+          &:before {
+              content: "";
+              background: linear-gradient(270deg, var(--#{$var-prefix}-border) 40%, var(--#{$var-prefix}-border-gradient) 100%);
+          }
+      }
+
+      [class^="col-"]:last-child {
+          &:before {
+              content: "";
+              background: linear-gradient(90deg, var(--#{$var-prefix}-border) 40%, var(--#{$var-prefix}-border-gradient) 100%);
+          }
+
+          &:after {
+              content: none;
+          }
+      }
+
+      [class^="col-"]:before {
+          content: "";
+          background: var(--#{$var-prefix}-border);
+      }
+
+      [class^="col-"]:after {
+          content: "";
+          background: var(--#{$var-prefix}-border);
+      }
+
+      &.kayden-single-row {
+
+        [class^="col-"]:not(:last-child):after{
+            content: "";
+            background: linear-gradient(180deg, var(--#{$var-prefix}-border-gradient) 10%, var(--#{$var-prefix}-border) 50%, var(--#{$var-prefix}-border-gradient) 90%);
+        }
+  
+
+
+      }
+
+  }
+}
+
+/* 7.4 To TOP */
+.toTop {
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    height: 45px;
+    width: 45px;
+    z-index: 10000;
+    right: 30px;
+    @include defaultTransition;
+    line-height: 45px;
+    background-color: $section-secondary-bg;
+    color: $section-secondary-color;
+    font-size: 1.2em;
+}
+
+@include media-breakpoint-down(sm)
+{
+  .kayden-gradient-grid {
+
+      [class^="col-sm"]{
+
+          &:before {
+              content: ""!important;
+              background: linear-gradient(90deg, var(--#{$var-prefix}-border-gradient) 10%, var(--#{$var-prefix}-border) 50%, var(--#{$var-prefix}-border-gradient) 90%) !important;
+          }
+
+          &:after {
+              content: none !important;
+          }
+
+      }
+
+      .row:last-child [class^="col-sm"]:last-child:before {
+          content: none !important;
+      }
+      
+  }
+}
+
+@include media-breakpoint-down(md)
+{
+  .kayden-gradient-grid {
+
+      [class^="col-md"]{
+
+          &:before {
+              content: ""!important;
+              background: linear-gradient(90deg, var(--#{$var-prefix}-border-gradient) 10%, var(--#{$var-prefix}-border) 50%, var(--#{$var-prefix}-border-gradient) 90%) !important;
+          }
+
+          &:after {
+              content: none !important;
+          }
+
+      }
+
+      .row:last-child [class^="col-md"]:last-child:before {
+          content: none !important;
+      }
+      
+  }
+}
+
+@include media-breakpoint-down(lg)
+{
+  .kayden-gradient-grid {
+
+      div[class^="col-lg"]{
+
+          &:before {
+              content: ""!important;
+              background: linear-gradient(90deg, var(--#{$var-prefix}-border-gradient) 10%, var(--#{$var-prefix}-border) 50%, var(--#{$var-prefix}-border-gradient) 90%) !important;
+          }
+
+          &:after {
+              content: none !important;
+          }
+
+      }
+
+      .row:last-child [class^="col-lg"]:last-child:before {
+          content: none !important;
+      }
+
+      
+  }
+}

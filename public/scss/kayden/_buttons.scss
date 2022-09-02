@@ -1,0 +1,94 @@
+/*===================
+    10. Buttons
+====================*/
+
+//
+// Alternate buttons
+// Overwrite Bootstrap Mixins for changins the colors.
+//
+
+
+@each $variant in $buttons-variants {
+
+  .btn-#{$variant} {
+    background: var(--kayden-buttons-#{$variant}-background);
+    color: var(--kayden-buttons-#{$variant}-text);
+    border-color: var(--kayden-buttons-#{$variant}-background);
+
+    &:hover {
+      background-color: var(--kayden-buttons-#{$variant}-background-hover);
+      border-color: var(--kayden-buttons-#{$variant}-background-hover);
+      color: var(--kayden-buttons-#{$variant}-text-hover);
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+      color: var(--kayden-buttons-#{$variant}-text-hover);
+      background-color: var(--kayden-buttons-#{$variant}-background-hover);
+      border-color: var(--kayden-buttons-#{$variant}-background-hover);
+      box-shadow: var(--kayden-buttons-#{$variant}-box-shadow);
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      background: var(--kayden-buttons-#{$variant}-background);
+      color: var(--kayden-buttons-#{$variant}-text);
+      border-color: var(--kayden-buttons-#{$variant}-background);
+
+      &:focus {
+        box-shadow: var(--kayden-buttons-#{$variant}-box-shadow);
+      }
+    }
+
+
+    &:disabled,
+    &.disabled {
+      color: var(--kayden-buttons-#{$variant}-text-disabled);
+      background-color: var(--kayden-buttons-#{$variant}-background-disabled);
+
+      border-color: var(--kayden-buttons-#{$variant}-background-disabled);
+    }
+    
+  }
+
+  .btn-outline-#{$variant} {
+    color: var(--kayden-buttons-#{$variant}-background);
+    border-color: var(--kayden-buttons-#{$variant}-background);
+
+    &:hover {
+      background-color: var(--kayden-buttons-#{$variant}-background-hover);
+      border-color: var(--kayden-buttons-#{$variant}-background-hover);
+      color: var(--kayden-buttons-#{$variant}-text-hover);
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+      box-shadow: var(--kayden-buttons-#{$variant}-box-shadow);
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      background: var(--kayden-buttons-#{$variant}-background);
+      color: var(--kayden-buttons-#{$variant}-text);
+      border-color: var(--kayden-buttons-#{$variant}-background);
+
+      &:focus {
+        box-shadow: var(--kayden-buttons-#{$variant}-box-shadow);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      color: var(--kayden-buttons-#{$variant}-background-disabled);
+      border-color: var(--kayden-buttons-#{$variant}-background-disabled);
+    }
+
+  }
+
+}

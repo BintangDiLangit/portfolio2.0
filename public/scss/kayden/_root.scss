@@ -1,0 +1,127 @@
+/*===================
+    2. Root
+====================*/
+
+:root[data-layout="manual"]{
+
+    .show-#{$current-layout}-mode-absolute {
+        opacity: 1;
+    }
+
+    .show-#{$current-layout}-mode {
+        display: block;
+    }
+}
+
+
+@each $layout in $layouts {
+
+    .show-#{$layout}-mode-absolute {
+        opacity: 0;
+        transition: all 1s ease-in;
+    }
+
+    .show-#{$layout}-mode {
+        display: none;
+    }
+
+    @media( prefers-color-scheme: #{$layout} ) {
+
+        :root[data-layout="auto"]{
+            
+            .show-#{$layout}-mode-absolute {
+                opacity: 1;
+            }
+    
+            .show-#{$layout}-mode {
+                display: block;
+            }
+        }
+    }
+  
+}
+
+
+
+@each $color, $settings in $colors_palettes {
+    :root[data-color="#{$color}"]{
+
+        @each $name, $value in $settings {
+            @if $name == 'buttons' {
+               @each $buttonType, $btn in $value {
+                
+                --#{$var-prefix}-#{$name}-#{$buttonType}-background: #{map-get($btn, 'background')};
+                --#{$var-prefix}-#{$name}-#{$buttonType}-background-hover: #{  darken(map-get($btn, 'background'), 10%)};
+                --#{$var-prefix}-#{$name}-#{$buttonType}-background-disabled: #{map-get($btn, 'background')}; 
+                --#{$var-prefix}-#{$name}-#{$buttonType}-text: #{map-get($btn, 'text')};
+                --#{$var-prefix}-#{$name}-#{$buttonType}-text-hover: #{map-get($btn, 'text')};
+                --#{$var-prefix}-#{$name}-#{$buttonType}-text-disabled: #{map-get($btn, 'text')};
+                --#{$var-prefix}-#{$name}-#{$buttonType}-box-shadow: #{map-get($btn, 'box-shadow')};
+
+               }
+            }
+            @else if $name == 'primary' {
+                --#{$var-prefix}-#{$name}: #{$value};
+                
+                --#{$var-prefix}-section-primary: #{$value};
+
+                --#{$var-prefix}-owl-dot: #{darken($value,20%)};
+                --#{$var-prefix}-social-shadow: #{rgba($value, 0.25)};
+                --#{$var-prefix}-social-shadow-hover: #{rgba($value, 0.6)};
+
+                --#{$var-prefix}-accordion-button-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$body-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"))};
+                --#{$var-prefix}-accordion-button-active-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{ shade-color($value, 10%) }'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"))};
+
+                //Form Control
+
+                --#{$var-prefix}-input-color: #{$body-color};
+                --#{$var-prefix}-input-background: #{$body-bg};
+                --#{$var-prefix}-input-border: #{$value};
+
+                --#{$var-prefix}-input-focus-color: #{$body-color};
+                --#{$var-prefix}-input-focus-background: #{$white};
+                --#{$var-prefix}-input-focus-border: #{$value};
+                --#{$var-prefix}-input-focus-shadow: #{rgba($value, 0.25)}; 
+
+                //Progress
+                --#{$var-prefix}-progress-bar: #{$value};
+                --#{$var-prefix}-progress: #{darken($value, 45%)};
+
+                //Shadow Animation
+                --#{$var-prefix}-shadow-animation: #{rgba($value, .15)};
+
+                .text-#{$name}
+                {
+                    color: #{$value} !important;
+                }
+                
+            }
+            @else if $name == 'border' 
+            {
+                @if not $kd_border-color
+                {
+                    --#{$var-prefix}-#{$name}: #{$value};
+                    --#{$var-prefix}-#{$name}-gradient: #{rgba($value, 0)};
+                }
+                @else 
+                {
+                    --#{$var-prefix}-#{$name}: #{$kd_border-color};
+                    --#{$var-prefix}-#{$name}-gradient: #{rgba($kd_border-color, 0)};
+                }
+
+            }
+            @else {
+                --#{$var-prefix}-#{$name}: #{$value};
+
+                .text-#{$name}
+                {
+                    color: #{$value} !important;
+                }
+            }
+           
+        }
+
+        
+
+    }
+}

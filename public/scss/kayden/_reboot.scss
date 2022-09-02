@@ -1,0 +1,45 @@
+/*===================
+    3. Reboot
+====================*/
+
+.progress {
+    background-color: var(--#{$var-prefix}-progress);
+}
+
+.progress-bar {
+    background-color: var(--#{$var-prefix}-progress-bar);
+}
+
+
+.table {
+    border-color: var(--#{$var-prefix}-border);
+}
+
+
+.accordion-button {
+    &:not(.collapsed) {
+        &::after {
+            background-image: var(--#{$var-prefix}-accordion-button-active-icon);
+        }
+    }
+
+    &::after {
+        background-image: var(--#{$var-prefix}-accordion-button-icon);
+    }
+}
+
+
+
+.form-control{
+    color: var(--#{$var-prefix}-input-color);
+    background-color: var(--#{$var-prefix}-input-background);
+    border: $input-border-width solid var(--#{$var-prefix}-input-border);
+    //box-shadow
+    &:focus {
+        color: var(--#{$var-prefix}-input-focus-color);
+        background-color: var(--#{$var-prefix}-input-focus-background);
+        border-color: var(--#{$var-prefix}-input-focus-border);
+        box-shadow: 0 0 0 0.25rem var(--#{$var-prefix}-input-focus-shadow);
+    }
+
+}

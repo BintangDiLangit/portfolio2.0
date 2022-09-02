@@ -1,0 +1,125 @@
+/*===================
+    4. Settings
+====================*/
+
+/* 4.1 General Settings */
+a {
+    @include defaultTransition;
+}
+
+p {
+    font-family: $font-family-secondary;
+}
+
+/* 4.2 Section Settings */
+section {
+    position: relative;
+    padding: 7rem 0;
+    
+    &.secondary-section {
+        background-color: $section-secondary-bg;
+        color: $section-secondary-color;
+    }
+
+    &.primary-section {
+        background-color: var(--#{$var-prefix}-section-primary);
+        color: $section-primary-color;
+    }
+
+    &.section_background {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba($section-secondary-bg, .7);
+    }
+}
+
+/* 4.3 OWL Carousel Settings */
+.owl-dots {
+    margin-top: 2rem;
+    text-align: center;
+  
+    .owl-dot {
+      outline: none;
+      span {
+        height: 5px;
+        width: 20px;
+        display: block;
+        margin: 5px 4px;
+        outline: none;
+        transition: all 0.5s;
+        background-color: var(--#{$var-prefix}-owl-dot);
+      }
+    }
+    .owl-dot.active {
+      span {
+        width: 40px;
+        background-color: var(--#{$var-prefix}-primary);
+      }
+    }
+}
+
+.row {
+    .owl-nav {
+        right: calc(var(--bs-gutter-x) / 2);
+    }  
+}
+
+.owl-nav {
+    text-align: center;
+    margin: 1.5rem 0;
+    .owl-prev, .owl-next
+    {
+        span {
+            color: transparent;
+            font-size: 0;
+            &:before {
+                font-weight: 700;
+                font-family: "Font Awesome 5 Free";
+                color: $white;
+                font-size: 3.5rem;
+            }
+        }
+        
+    }
+    .owl-prev {
+        margin-right: 3.4rem;
+        span {
+            &:before {
+                content: "\f053";
+            }
+        }
+    }
+
+    .owl-next {
+        span {
+            &:before {
+                content: "\f054";
+            }
+        }
+    }
+}
+
+
+/* 4.4 Magnific Popup fade effect */
+
+/*Special thanks edmundojr*/
+/*URL: https://gist.github.com/edmundojr/0893e966b4c8ac30b2d0 */
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	background: $preloader-bg;
+	transition: all .3s;
+}
+
+.mfp-fade.mfp-bg.mfp-ready    { opacity: .9; }
+.mfp-fade.mfp-bg.mfp-removing { opacity: 0; }
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	transition: all .3s;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content    { opacity: 1; }
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
