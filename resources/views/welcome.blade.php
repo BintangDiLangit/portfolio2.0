@@ -15,7 +15,7 @@
     <meta property="og:title" content="Bintang - Software Engineer ">
     <meta property="og:description"
         content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
-    <meta property="og:image" content="https://demo.themesuccess.com/templates/kayden/assets/images/preview.jpg">
+    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
     <meta property="og:url" content="https://bintangmfhd.com/">
     <!--Favicon-->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
