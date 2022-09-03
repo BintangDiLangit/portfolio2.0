@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bintang - Professional Web</title>
+    <title>Bintang - Software Engineer</title>
     <!--Usefull Meta-->
-    <meta name="description"
-        content="A slick, customizable CV, Resume or Portfolio template, perfect for photographers, freelancers or designers.">
-    <meta name="keywords" content="angus, resume, cv, vCard, portfolio, html template, template, responsive">
+    <meta name="description" content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
+    <meta name="keywords" content="bintangmfhd, resume, cv, vCard, portfolio, responsive, software engineer, programmer">
     <meta name="robots" content="index, follow, noodp">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
-    <meta property="og:title" content="Bintangmfhd - Personal Bootstrap 5 HTML Portfolio Template">
+    <meta property="og:title" content="Bintang - Software Engineer ">
     <meta property="og:description"
-        content="A slick, customizable CV, Resume or Portfolio template, perfect for photographers, freelancers or designers.">
+        content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
     <meta property="og:image" content="https://demo.themesuccess.com/templates/kayden/assets/images/preview.jpg">
-    <meta property="og:url" content="https://demo.themesuccess.com/templates/kayden/">
+    <meta property="og:url" content="https://bintangmfhd.com/">
     <!--Favicon-->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png">
@@ -192,9 +191,10 @@
                         <div class="h-100 d-flex align-items-center justify-content-center">
                             <div class="about-details">
                                 <h2 class="fs-3 fw-bold mb-5">I'm Bintang Miftaqul Huda</h2>
-                                <p class="text-secondary mb-5">Hi! There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration in some form, by injected
-                                    humour, or randomised words which don't look even slightly believable.</p>
+                                <p class="text-secondary mb-5">Hi! I'm focused and exploring the backend and leadership
+                                    areas, and more than 2 years experience. I usually participate in competitions about
+                                    Business IT, Hacathon, and Cyber Security I also create a YouTube channel which i
+                                    use as a way to pass on my knowledge to others.</p>
                                 <!--Social Links START-->
                                 <ul class="social-links list-inline mb-5">
                                     <li class="list-inline-item">
@@ -230,40 +230,40 @@
                             <h2 class="fs-3 mb-5 fw-bold">My Skills</h2>
                             <!--Progress Bar START-->
                             <div class="mb-4">
-                                <label class="mb-3 fs-6">Web Design 75%</label>
+                                <label class="mb-3 fs-6">Backend Developer</label>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="75"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
+                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                         aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <!--Progress Bar END-->
                             <!--Progress Bar START-->
                             <div class="mb-4">
-                                <label class="mb-3 fs-6">Web Development 90%</label>
+                                <label class="mb-3 fs-6">Web Development</label>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="90"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
+                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                         aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <!--Progress Bar END-->
                             <!--Progress Bar START-->
                             <div class="mb-4">
-                                <label class="mb-3 fs-6">Wordpress development 70%</label>
+                                <label class="mb-3 fs-6">Leadership</label>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="70"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
+                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                         aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <!--Progress Bar END-->
                             <!--Progress Bar START-->
                             <div class="mb-4">
-                                <label class="mb-3 fs-6">Front end development 95%</label>
+                                <label class="mb-3 fs-6">Communications</label>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="95"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
+                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                         aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="9"
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="2"
                                     data-speed="1500">0</span><sup>+</sup></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Years Experience</p>
                         </div>
@@ -286,7 +286,7 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="100"
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="10"
                                     data-speed="1500">0</span><sup>+</sup></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Happy Clients</p>
                         </div>
@@ -295,16 +295,16 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="8963"
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="2"
                                     data-speed="1500">0</span></h3>
-                            <p class="fs-4 d-inline-block text-center text-md-left">Downloads</p>
+                            <p class="fs-4 d-inline-block text-center text-md-left">Winning Competitions</p>
                         </div>
                         <!--Facts Item END-->
                     </div>
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="2569"
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="18"
                                     data-speed="1500">0</span></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Projects done</p>
                         </div>
@@ -585,34 +585,19 @@
                         <tbody>
                             <tr>
                                 <td class="d-table-cell d-sm-none">
-                                    <div class="mb-3 fw-light">2010-2016</div>
-                                    <div class="mb-3 fw-bold">Univercity of Boston, Computer Science</div>
+                                    <div class="mb-3 fw-light">2019-2022</div>
+                                    <div class="mb-3 fw-bold">UIN Malang, Indonesia,
+                                        Informatics Engineer</div>
                                     <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</div>
                                 </td>
                                 <td class="w-25 d-none d-sm-table-cell">
-                                    <span class="fw-light fs-5">2010-2016</span>
+                                    <span class="fw-light fs-5">2019-2022</span>
                                 </td>
                                 <td class="w-50 d-none d-sm-table-cell">
-                                    <span class="fw-bold fs-5">Univercity of Boston, Computer Science</span>
+                                    <span class="fw-bold fs-5">UIN Malang, Indonesia,
+                                        Informatics Engineer</span>
                                 </td>
                                 <td class="w-25 d-none d-sm-table-cell">
-                                    <span class="fw-normal text-secondary">Lorem ipsum dolor sit amet, consetetur
-                                        sadipscing elitr, sed diam nonumy </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="d-table-cell d-sm-none border-0">
-                                    <div class="mb-3 fw-light">2010-2016</div>
-                                    <div class="mb-3 fw-bold">Univercity of Boston, Computer Science</div>
-                                    <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</div>
-                                </td>
-                                <td class="w-25 d-none d-sm-table-cell border-0">
-                                    <span class="fw-light fs-5">2010-2016</span>
-                                </td>
-                                <td class="w-50 d-none d-sm-table-cell border-0">
-                                    <span class="fw-bold fs-5">Univercity of Boston, Computer Science</span>
-                                </td>
-                                <td class="w-25 d-none d-sm-table-cell border-0">
                                     <span class="fw-normal text-secondary">Lorem ipsum dolor sit amet, consetetur
                                         sadipscing elitr, sed diam nonumy </span>
                                 </td>
