@@ -17,10 +17,14 @@ class WelcomeController extends Controller
         $response = Http::post(env('APP_URL_API') . '/api/v1/seo');
         $responseSkill = Http::post(env('APP_URL_API') . '/api/v1/skills');
         $responsePortfolio = Http::post(env('APP_URL_API') . '/api/v1/all-portfolios');
+        $responseCV = Http::post(env('APP_URL_API') . '/api/v1/cv');
+        $responseTestimoni = Http::post(env('APP_URL_API') . '/api/v1/clients');
         $data = $response->json()["data"][0];
         $skills = $responseSkill->json()["data"];
         $portfolios = $responsePortfolio->json()["data"];
-        return view('welcome', compact('data', 'env', 'skills', 'portfolios'));
+        $cv = $responseCV->json()["data"];
+        $testimonials = $responseTestimoni->json()["data"];
+        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials'));
     }
 
     public function sendEmail(Request $request)

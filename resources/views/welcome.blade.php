@@ -107,11 +107,11 @@
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">Portfolio</a>
                     </li>
-                    <li class="py-3">
+                    {{-- <li class="py-3">
                         <a href="#faq"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">FAQ</a>
-                    </li>
+                    </li> --}}
                     <li class="py-3">
                         <a href="#contact"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
@@ -211,7 +211,8 @@
                                     </li>
                                 </ul>
                                 <!--Social Links END-->
-                                <a href="#" class="btn btn-outline-primary" title="Download CV">Download CV</a>
+                                <a href="{{ $env . '/file-cv/' . $cv['path'] }}" class="btn btn-outline-primary"
+                                    title="Download CV">Download CV</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +287,8 @@
         <div class="container">
             <!--Section Heading START-->
             <div class="heading text-center mb-5">
-                <h2 class="fs-3 kayden-underline-left mb-5 fw-bold text-uppercase d-inline-block">Services</h2>
+                <h2 class="fs-3 kayden-underline-left mb-5 fw-bold text-uppercase d-inline-block">Technology I Use
+                </h2>
             </div>
             <!--Section Heading END-->
             <!--Section Body START-->
@@ -299,11 +301,10 @@
                         <div class="col-lg-4 text-center">
                             <div class="p-5">
                                 <div class="fs-3 mb-3">
-                                    <i class="fas fa-server"></i>
+                                    <i class="fas fa-mobile-alt"></i>
                                 </div>
-                                <h4 class="mb-3">Development</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">Language</h4>
+                                <p class="text-secondary">PHP, Javascript, Golang, Java</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -311,11 +312,10 @@
                         <div class="col-lg-4 text-center">
                             <div class="p-5">
                                 <div class="fs-3 mb-3">
-                                    <i class="fas fa-mobile-alt"></i>
+                                    <i class="fas fa-server"></i>
                                 </div>
-                                <h4 class="mb-3">Responsive</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">Framework Backend</h4>
+                                <p class="text-secondary">Gorilla Mux, Laravel, Lumen.</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -325,9 +325,8 @@
                                 <div class="fs-3 mb-3">
                                     <i class="fas fa-mug-hot"></i>
                                 </div>
-                                <h4 class="mb-3">UX / UI Design</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">VCS</h4>
+                                <p class="text-secondary">Github, Gitlab, BitBucket.</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -341,9 +340,8 @@
                                 <div class="fs-3 mb-3">
                                     <i class="far fa-clone"></i>
                                 </div>
-                                <h4 class="mb-3">User Friendly</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">Framework Frontend</h4>
+                                <p class="text-secondary">Bootstrap, Jquery, React</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -353,9 +351,8 @@
                                 <div class="fs-3 mb-3">
                                     <i class="far fa-heart"></i>
                                 </div>
-                                <h4 class="mb-3">Lovely</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">OS</h4>
+                                <p class="text-secondary">Linux (Parrot, Ubuntu, Kali Linux, Manjaro), Windows</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -365,9 +362,8 @@
                                 <div class="fs-3 mb-3">
                                     <i class="fas fa-rocket"></i>
                                 </div>
-                                <h4 class="mb-3">Bootstrap 5</h4>
-                                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                <h4 class="mb-3">Cloud & Hosting</h4>
+                                <p class="text-secondary">AWS, Hostinger</p>
                             </div>
                         </div>
                         <!--Gradient Grid Item END-->
@@ -483,76 +479,27 @@
                     <!--OWL Slider START-->
                     <div id="client_slider" class="owl-carousel">
                         <!--OWL Slider Item START-->
-                        <div class="offset-1 col-10">
-                            <div class="row">
-                                <div class="col-md-6 order-2 order-md-1">
-                                    <div class="testimonial_details">
-                                        <p class="text-secondary mb-3">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                            text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled
-                                            it to make a type specimen book.</p>
-                                        <span class="font-family-secondary fs-5 fw-light fst-italic">--Emma
-                                            Watson</span>
+                        @foreach ($testimonials as $item)
+                            <div class="offset-1 col-10">
+                                <div class="row">
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="testimonial_details">
+                                            <p class="text-secondary mb-3">{{ $item['clientMessage'] }}</p>
+                                            <span
+                                                class="font-family-secondary fs-5 fw-light fst-italic">--{{ $item['name'] }}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 order-1 order-md-2">
-                                    <div
-                                        class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
-                                        <img src="assets/images/testimonial1.jpg"
-                                            class="kayden-shadow rounded-3 w-auto" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--OWL Slider Item END-->
-                        <!--OWL Slider Item START-->
-                        <div class="offset-1 col-10">
-                            <div class="row">
-                                <div class="col-md-6 order-2 order-md-1">
-                                    <div class="testimonial_details">
-                                        <p class="text-secondary mb-3">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                            text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled
-                                            it to make a type specimen book.</p>
-                                        <span class="font-family-secondary fs-5 fw-light fst-italic">--Linzi
-                                            Landry</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 order-1 order-md-2">
-                                    <div
-                                        class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
-                                        <img src="assets/images/testimonial2.jpg"
-                                            class="kayden-shadow rounded-3 w-auto" alt="">
+                                    <div class="col-md-6 order-1 order-md-2">
+                                        <div
+                                            class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
+                                            <img src="{{ $env . '/client-images/' . $item['photo'] }}"
+                                                class="kayden-shadow rounded-3 w-auto" alt=""
+                                                height="300rem">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--OWL Slider Item END-->
-                        <!--OWL Slider Item START-->
-                        <div class="offset-1 col-10">
-                            <div class="row">
-                                <div class="col-md-6 order-2 order-md-1">
-                                    <div class="testimonial_details">
-                                        <p class="text-secondary mb-3">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                            text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled
-                                            it to make a type specimen book.</p>
-                                        <span class="font-family-secondary fs-5 fw-light fst-italic">--Maksim
-                                            Mckenna</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 order-1 order-md-2">
-                                    <div
-                                        class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
-                                        <img src="assets/images/testimonial3.jpg"
-                                            class="kayden-shadow rounded-3 w-auto" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         <!--OWL Slider Item END-->
 
                     </div>
