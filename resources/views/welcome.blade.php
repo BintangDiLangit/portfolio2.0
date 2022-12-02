@@ -69,16 +69,9 @@
                     </a>
                 </div>
                 <!--Header Toggler END-->
-                <!--Header Logo START-->
-                <div class="kayden-logo">
-                    <a href="#">
-                        <img src="assets/images/logo_dark.svg" height="30" alt="kayden">
-                    </a>
-                </div>
-                <!--Header Logo END-->
                 <!--Header Info START-->
                 <div class="kayden-nav-meta fs-5 fw-bold d-none d-sm-block text-end">
-                    <a href="#" class="text-reset">+62 878 8137 3842</a>
+                    <a href="#" class="text-reset">{{ $data['phone_number'] }}</a>
                 </div>
                 <!--Header Info END-->
             </div>
@@ -145,17 +138,19 @@
                     <div class="row gy-5">
                         <div class="col-md-6">
                             <div class="about-image h-100 w-100 d-flex align-items-center">
-                                <img src="assets/images/bintangv2-1.png"
+                                <img src="{{ $env . $data['main_image'] }}"
                                     class="kayden_morph_animation img-fluid kayden-shadow fit-cover fit-left-top"
-                                    alt="kayden Picture" data-aos="zoom-in" data-aos-duration="800">
+                                    alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="text-center text-sm-end w-100 h-100 d-flex align-items-center">
                                 <div class="w-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                                     <p class="welcome_text fs-4"><span class="typed_text"
-                                            data-options="Software Engineer, Web Developer"></span></p>
-                                    <h1 class="fs-2 fw-bold d-inline-block typed_text mb-5">I'm Bintang</h1>
+                                            data-options="{{ $data['job_title'] }}"></span></p>
+                                    <h1 class="fs-2 fw-bold d-inline-block typed_text mb-5">I'm
+                                        {{ strtok($data['name'], ' ') }}
+                                    </h1>
                                     <div class="home_button_area">
                                         <a href="#portfolio" class="btn btn-primary kayden_scrollspy">My Portfolio</a>
                                     </div>
@@ -190,31 +185,28 @@
                     <div class="offset-md-1 col-md-5 mt-5 mt-md-0">
                         <div class="h-100 d-flex align-items-center justify-content-center">
                             <div class="about-details">
-                                <h2 class="fs-3 fw-bold mb-5">I'm Bintang Miftaqul Huda</h2>
-                                <p class="text-secondary mb-5">Hi! I'm focused and exploring the backend and leadership
-                                    areas, and more than 2 years experience. I usually participate in competitions about
-                                    Business IT, Hacathon, and Cyber Security I also create a YouTube channel which i
-                                    use as a way to pass on my knowledge to others.</p>
+                                <h2 class="fs-3 fw-bold mb-5">I'm {{ $data['name'] }}</h2>
+                                <p class="text-secondary mb-5">{{ $data['introducing'] }}</p>
                                 <!--Social Links START-->
                                 <ul class="social-links list-inline mb-5">
                                     <li class="list-inline-item">
-                                        <a href="#" title="facebook">
-                                            <i class="fab fa-facebook-f"></i>
+                                        <a href="{{ $data['instagram'] }}" title="instagram">
+                                            <i class="fab fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" title="linkedin">
+                                        <a href="{{ $data['linkedin'] }}" title="linkedin">
                                             <i class="fab fa-linkedin-in"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" title="pinterest">
-                                            <i class="fab fa-pinterest-p"></i>
+                                        <a href="{{ $data['medium'] }}" title="medium">
+                                            <i class="fab fa-medium"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" title="git">
-                                            <i class="fab fa-git"></i>
+                                        <a href="{{ $data['github'] }}" title="github">
+                                            <i class="fab fa-github"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -229,45 +221,16 @@
                         <div class="skills_container">
                             <h2 class="fs-3 mb-5 fw-bold">My Skills</h2>
                             <!--Progress Bar START-->
-                            <div class="mb-4">
-                                <label class="mb-3 fs-6">Backend Developer</label>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
+                            @foreach ($skills as $item)
+                                <div class="mb-4">
+                                    <label class="mb-3 fs-6">{{ $item['skill_name'] }}</label>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
+                                            style="width: 0%;" role="progressbar" aria-valuenow="100"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--Progress Bar END-->
-                            <!--Progress Bar START-->
-                            <div class="mb-4">
-                                <label class="mb-3 fs-6">Web Development</label>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <!--Progress Bar END-->
-                            <!--Progress Bar START-->
-                            <div class="mb-4">
-                                <label class="mb-3 fs-6">Leadership</label>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <!--Progress Bar END-->
-                            <!--Progress Bar START-->
-                            <div class="mb-4">
-                                <label class="mb-3 fs-6">Communications</label>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
-                                        style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <!--Progress Bar END-->
+                            @endforeach
                         </div>
                     </div>
                     <!--About Section Progress END-->
@@ -277,8 +240,9 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="2"
-                                    data-speed="1500">0</span><sup>+</sup></h3>
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
+                                    data-to="{{ $data['years_experience'] }}" data-speed="1500">0</span><sup>+</sup>
+                            </h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Years Experience</p>
                         </div>
                         <!--Facts Item END-->
@@ -286,8 +250,9 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="10"
-                                    data-speed="1500">0</span><sup>+</sup></h3>
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
+                                    data-to="{{ $data['happy_clients'] }}" data-speed="1500">0</span><sup>+</sup>
+                            </h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Happy Clients</p>
                         </div>
                         <!--Facts Item END-->
@@ -295,8 +260,8 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="2"
-                                    data-speed="1500">0</span></h3>
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
+                                    data-to="{{ $data['winning_competitions'] }}" data-speed="1500">0</span></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Winning Competitions</p>
                         </div>
                         <!--Facts Item END-->
@@ -304,8 +269,8 @@
                     <div class="col-6 col-md-3">
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
-                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0" data-to="18"
-                                    data-speed="1500">0</span></h3>
+                            <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
+                                    data-to="{{ $data['project_done'] }}" data-speed="1500">0</span></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Projects done</p>
                         </div>
                         <!--Facts Item END-->
@@ -428,139 +393,22 @@
                 <!--Masonry Grid Container START-->
                 <div class="row gy-4 grid">
                     <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="./portfolio/portfolio1.html"
-                            class="portfolio-item portfolio-ajax underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio1.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Man in Neon</h3>
-                                <span class="d-block fw-light small-font-size">Street</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio2.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio2.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Girl in Yellow</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio3.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio3.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio4.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio4.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio5.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio5.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio6.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio6.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio7.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio7.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
-                    <!--Masonry Grid Item END-->
-                    <!--Masonry Grid Item START-->
-                    <div class="col-md-6 col-lg-3 grid-item">
-
-                        <a href="assets/images/portfolio8.jpg"
-                            class="portfolio-item portfolio-image underline_animation text-reset">
-                            <div class="portfolio-thumbnail">
-                                <img src="assets/images/portfolio8.jpg" class="img-fluid img-grayTransition"
-                                    alt="">
-                            </div>
-                            <div class="portfolio-description my-3">
-                                <h3 class="fs-5 underline_text fw-bold d-inline-block">Blue words</h3>
-                                <span class="d-block fw-light small-font-size">Neon</span>
-                            </div>
-                        </a>
-
-                    </div>
+                    @foreach ($portfolios as $item)
+                        <div class="col-md-6 col-lg-3 grid-item">
+                            <a href="/detail-portfolio/{{ $item['id'] }}" {{-- class="portfolio-item portfolio-ajax underline_animation text-reset"> --}}
+                                class="portfolio-item underline_animation text-reset">
+                                <div class="portfolio-thumbnail">
+                                    <img src="{{ $env . '/portofolio-images/' . $item['image'] }}"
+                                        class="img-fluid img-grayTransition" alt="">
+                                </div>
+                                <div class="portfolio-description my-3">
+                                    <h3 class="fs-5 underline_text fw-bold d-inline-block">{{ $item['title'] }}</h3>
+                                    <span
+                                        class="d-block fw-light small-font-size">{{ substr($item['description'], 0, 15) . '..' }}</span>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                     <!--Masonry Grid Item END-->
                 </div>
                 <!--Masonry Grid Container END-->
@@ -717,7 +565,7 @@
     </section>
     <!--Testimonials END-->
     <!--FAQ START-->
-    <section id="faq">
+    {{-- <section id="faq">
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
@@ -826,7 +674,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--FAQ END-->
     <!--Contact Us START-->
     <section id="contact" class="secondary-section">
@@ -847,9 +695,9 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary">
-                                    <a href="#" class="text-reset">
+                                    <a href="mailto:{{ $data['email'] }}" class="text-reset">
                                         <span class="__cf_email__"
-                                            data-cfemail="741f150d10111a34110c15190418115a171b19">[email&#160;protected]</span>
+                                            data-cfemail="741f150d10111a34110c15190418115a171b19">{{ $data['email'] }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -860,7 +708,7 @@
                                     <i class="fas fa-map-marked-alt"></i>
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary text-reset">
-                                    New York, USA
+                                    {{ $data['address'] }}
                                 </div>
                             </div>
                             <!--Contact Details END-->
@@ -871,7 +719,7 @@
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary">
                                     <a href="#" class="text-reset">
-                                        +7 123 456 789
+                                        {{ $data['phone_number'] }}
                                     </a>
                                 </div>
                             </div>
@@ -880,21 +728,23 @@
                     </div>
                     <div class="col-md-6">
                         <h3 class="mb-5 fs-4 text-center text-sm-left">Or Let's start to conversation</h3>
-                        <form action="php/form.php" method="post" id="contact-form">
+                        <form action="{{ route('send.email') }}" method="post">
+                            @csrf
                             <div class="mb-4">
-                                <input type="text" name="name" id="name" placeholder="Full name"
-                                    class="form-control">
+                                <input type="text" style="color: white; background-color: black" name="full_name"
+                                    id="name" placeholder="Full name" class="form-control">
                             </div>
                             <div class="mb-4">
-                                <input type="email" name="email" id="email" placeholder="Email"
-                                    class="form-control">
+                                <input type="email" style="color: white; background-color: black" name="email"
+                                    id="email" placeholder="Email" class="form-control">
                             </div>
                             <div class="mb-4">
-                                <input type="text" name="subject" id="subject" placeholder="Subject"
-                                    class="form-control">
+                                <input type="text" style="color: white; background-color: black" name="subject"
+                                    id="subject" placeholder="Subject" class="form-control">
                             </div>
                             <div class="mb-4">
-                                <textarea placeholder="Message" name="text" id="text" class="form-control" cols="30" rows="10"></textarea>
+                                <textarea placeholder="Message" style="color: white; background-color: black" name="message" name="text"
+                                    id="text" class="form-control" cols="30" rows="10"></textarea>
                             </div>
                             <div class="mb-4">
                                 <button type="submit" id="contact-btn" class="btn btn-primary">Send Message</button>
