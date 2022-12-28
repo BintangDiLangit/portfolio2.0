@@ -430,20 +430,19 @@
                             <tr>
                                 <td class="d-table-cell d-sm-none">
                                     <div class="mb-3 fw-light">2019-2022</div>
-                                    <div class="mb-3 fw-bold">UIN Malang, Indonesia,
-                                        Informatics Engineer</div>
-                                    <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</div>
+                                    <div class="mb-3 fw-bold">Maulana Malik Ibrahim State Islamic University of
+                                        Malang, Indonesia</div>
+                                    <div></div>
                                 </td>
                                 <td class="w-25 d-none d-sm-table-cell">
                                     <span class="fw-light fs-5">2019-2022</span>
                                 </td>
                                 <td class="w-50 d-none d-sm-table-cell">
-                                    <span class="fw-bold fs-5">UIN Malang, Indonesia,
-                                        Informatics Engineer</span>
+                                    <span class="fw-bold fs-5">Maulana Malik Ibrahim State Islamic University of
+                                        Malang, Indonesia</span>
                                 </td>
                                 <td class="w-25 d-none d-sm-table-cell">
-                                    <span class="fw-normal text-secondary">Lorem ipsum dolor sit amet, consetetur
-                                        sadipscing elitr, sed diam nonumy </span>
+                                    <span class="fw-normal text-secondary">Informatics Engineering </span>
                                 </td>
                             </tr>
                         </tbody>
