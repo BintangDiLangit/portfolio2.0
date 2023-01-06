@@ -61,6 +61,6 @@ class WelcomeController extends Controller
             $data = $response->json()["data"];
             return view('detailportfolio', compact('data', 'env'));
         }
-        WelcomeController::index();
+        return redirect(route('welcome'));
     }
 }
