@@ -50,7 +50,6 @@ class WelcomeController extends Controller
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            dd($e);
         }
     }
 
@@ -58,7 +57,9 @@ class WelcomeController extends Controller
     {
         $env = env('APP_URL_API');
         $response = Http::post(env('APP_URL_API') . '/api/v1/portfolio/' . $id);
-        $data = $response->json()["data"];
-        return view('detailportfolio', compact('data', 'env'));
+        if ($response->getStatusCode() == 200) {
+            $data = $response->json()["data"];
+            return view('detailportfolio', compact('data', 'env'));
+        }
     }
 }
