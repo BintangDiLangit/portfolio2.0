@@ -7,14 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bintang - Software Engineer</title>
     <!--Usefull Meta-->
-    <meta name="description" content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
-    <meta name="keywords" content="bintangmfhd, resume, cv, vCard, portfolio, responsive, software engineer, programmer">
+
+    <meta name="title" content="Bintang Miftaqul Huda">
+    <meta name="description"
+        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Bintang Miftaqul Huda">
+    <meta property="twitter:description"
+        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+    <meta property="twitter:image"
+        content="https://main.bintangmfhd.com/storage/main_image/main_image6389a6f30d271y9vel.jpg">
+
+    <meta name="keywords"
+        content="bintangmfhd, resume, cv, vCard, portfolio, responsive, software engineer, programmer, Bintang Miftaqul Huda">
     <meta name="robots" content="index, follow, noodp">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
-    <meta property="og:title" content="Bintang - Software Engineer ">
-    <meta property="og:description"
-        content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
+    <meta property="og:title" content="Bintang - Software Engineer">
     <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
     <meta property="og:url" content="https://bintangmfhd.com/">
     <!--Favicon-->
