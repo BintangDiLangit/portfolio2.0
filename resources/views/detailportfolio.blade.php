@@ -108,11 +108,6 @@
                             data-bs-dismiss="offcanvas">Portfolio</a>
                     </li>
                     <li class="py-3">
-                        <a href="/#faq"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">FAQ</a>
-                    </li>
-                    <li class="py-3">
                         <a href="/#contact"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">Contact</a>
