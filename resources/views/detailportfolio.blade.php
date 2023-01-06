@@ -93,27 +93,27 @@
                 <!--Off Canvas Navigation START-->
                 <ul class="kayden-offcanvas-nav list-inline">
                     <li class="py-3">
-                        <a href="#home"
+                        <a href="/#home"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">Home</a>
                     </li>
                     <li class="py-3">
-                        <a href="#about"
+                        <a href="/#about"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">About</a>
                     </li>
                     <li class="py-3">
-                        <a href="#portfolio"
+                        <a href="/#portfolio"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">Portfolio</a>
                     </li>
                     <li class="py-3">
-                        <a href="#faq"
+                        <a href="/#faq"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">FAQ</a>
                     </li>
                     <li class="py-3">
-                        <a href="#contact"
+                        <a href="/#contact"
                             class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
                             data-bs-dismiss="offcanvas">Contact</a>
                     </li>
@@ -180,7 +180,7 @@
         <div class="container h-100">
             <div class="about_inside w-100 h-100 d-flex justify-content-center align-items-center flex-wrap">
                 <img src="{{ $env . '/portofolio-images/' . $data['image'] }}" class="mb-3 ml-auto mr-auto"
-                    height="800rem" alt="">
+                    width="90%" alt="">
                 <div class="row w-100 mb-5 mt-4">
                     <!--About Section Details START-->
                     <div class="offset-md-1 col-md-12 mt-5 mt-md-0">
