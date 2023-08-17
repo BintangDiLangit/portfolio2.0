@@ -1,0 +1,14 @@
+#accordion-section-workart_featured_artist_section,
+#accordion-section-workart_our_services_section,
+#accordion-section-workart_gallery_section,
+#accordion-section-workart_subscribe_section,
+#accordion-section-workart_subscribe_section,
+#accordion-section-workart_latest_posts_section,
+#accordion-section-workart_hero_slider_section{
+    display: none !important;
+}
+
+#customize-control-about_us_section_enable,
+#accordion-section-workart_about_us_section{
+	display: block !important;
+}

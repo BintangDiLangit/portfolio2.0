@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 12:41+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.php:6
+msgid "Social"
+msgstr ""
+
+#: functions.php:55
+msgctxt "Poppins font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/about.php:5
+msgid "About us"
+msgstr ""
+
+#: inc/about.php:6
+msgid "About us  Section options."
+msgstr ""
+
+#: inc/about.php:23
+msgid "About Section Enable"
+msgstr ""
+
+#: inc/about.php:39 inc/cta.php:39 inc/recent-posts.php:53
+msgid "Section Sub Title:"
+msgstr ""
+
+#: inc/about.php:55 inc/cta.php:55
+msgid "Select Page"
+msgstr ""
+
+#: inc/about.php:73 inc/cta.php:73 inc/slider.php:61
+msgid "Button Text:"
+msgstr ""
+
+#: inc/about.php:90
+msgid "Extra Image"
+msgstr ""
+
+#: inc/about.php:91
+#, php-format
+msgid "Recommended size: %1$dpx x %2$dpx "
+msgstr ""
+
+#: inc/cta.php:5
+msgid "CTA"
+msgstr ""
+
+#: inc/cta.php:6
+msgid "CTA  Section options."
+msgstr ""
+
+#: inc/cta.php:23
+msgid "CTA Section Enable"
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "--None--"
+msgstr ""
+
+#: inc/recent-posts.php:5
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/recent-posts.php:6
+msgid "Recent Posts Section options."
+msgstr ""
+
+#: inc/recent-posts.php:22
+msgid "Recent Post Section Enable"
+msgstr ""
+
+#: inc/recent-posts.php:38
+msgid "Section Title:"
+msgstr ""
+
+#: inc/recent-posts.php:70
+#, php-format
+msgid "Select Post: %d"
+msgstr ""
+
+#: inc/slider.php:5
+msgid "Featured Slider"
+msgstr ""
+
+#: inc/slider.php:6
+msgid "Featured Slider Section options."
+msgstr ""
+
+#: inc/slider.php:22
+msgid "Featured Slider Section Enable"
+msgstr ""
+
+#: inc/slider.php:41
+#, php-format
+msgid "Select Page: %d"
+msgstr ""
+
+#: inc/slider.php:73
+msgid "Alt Btn Label"
+msgstr ""
+
+#: inc/slider.php:84
+msgid "Alt Btn Url"
+msgstr ""
+
+#: inc/topbar.php:6
+msgid "Topbar"
+msgstr ""
+
+#: inc/topbar.php:7
+msgid "Topbar Section options."
+msgstr ""
+
+#: inc/topbar.php:24
+msgid "Topbar Section Enable"
+msgstr ""
+
+#: inc/topbar.php:39
+msgid "Contact Number"
+msgstr ""
+
+#: inc/topbar.php:54
+msgid "Contact Email"
+msgstr ""
+
+#: inc/topbar.php:69
+msgid "Contact Location"
+msgstr ""
+
+#: inc/topbar.php:89
+msgid "Social Menu Enable"
+msgstr ""
+
+#: inc/topbar.php:90
+msgid "Note: To show secondary and social menu."
+msgstr ""
+
+#: inc/topbar.php:90
+msgid "Click Here"
+msgstr ""
+
+#: inc/topbar.php:90
+msgid "to create menu"
+msgstr ""
