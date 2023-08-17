@@ -155,7 +155,7 @@
                     <div class="row gy-5">
                         <div class="col-md-6">
                             <div class="about-image h-100 w-100 d-flex align-items-center">
-                                <img src="{{ $env . $data['main_image'] }}"
+                                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/main_image/' . $data['main_image'] }}"
                                     class="kayden_morph_animation img-fluid kayden-shadow fit-cover fit-left-top"
                                     alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800">
                             </div>
@@ -411,7 +411,7 @@
                             <a href="/detail-portfolio/{{ $item['id'] }}" {{-- class="portfolio-item portfolio-ajax underline_animation text-reset"> --}}
                                 class="portfolio-item underline_animation text-reset">
                                 <div class="portfolio-thumbnail">
-                                    <img src="{{ $env . '/portofolio-images/' . $item['image'] }}"
+                                    <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $item['image'] }}"
                                         class="img-fluid img-grayTransition" alt="">
                                 </div>
                                 <div class="portfolio-description my-3">
@@ -461,7 +461,7 @@
                                                 class="fw-bold fs-5 underline_text d-inline-block">{{ $awardee['title'] }}</span>
                                             <br>
                                             <div class="portfolio-thumbnail">
-                                                <img src="{{ $env . '/storage/competition-images/' . $awardee['image'] }}"
+                                                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/competition-images/' . $awardee['image'] }}"
                                                     class="img-fluid img-grayTransition mt-5" alt=""
                                                     width="60%">
                                             </div>
@@ -560,7 +560,7 @@
                                     <div class="col-md-6 order-1 order-md-2">
                                         <div
                                             class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
-                                            <img src="{{ $env . '/client-images/' . $item['photo'] }}"
+                                            <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/client-images/' . $item['photo'] }}"
                                                 class="kayden-shadow rounded-3 w-auto" alt=""
                                                 height="300rem">
                                         </div>

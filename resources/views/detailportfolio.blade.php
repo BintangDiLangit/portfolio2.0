@@ -133,7 +133,7 @@
                     <div class="row gy-5">
                         <div class="col-md-12">
                             <div class="about-image h-100 w-100 d-flex align-items-center">
-                                <img src="{{ $env . '/portofolio-images/' . $data['image'] }}"
+                                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $data['image'] }}"
                                     class="kayden_morph_animation img-fluid kayden-shadow fit-cover fit-left-top"
                                     alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800">
                             </div>
@@ -174,8 +174,8 @@
     <section id="about" class="secondary-section">
         <div class="container h-100">
             <div class="about_inside w-100 h-100 d-flex justify-content-center align-items-center flex-wrap">
-                <img src="{{ $env . '/portofolio-images/' . $data['image'] }}" class="mb-3 ml-auto mr-auto"
-                    width="90%" alt="">
+                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $data['image'] }}"
+                    class="mb-3 ml-auto mr-auto" width="90%" alt="">
                 <div class="row w-100 mb-5 mt-4">
                     <!--About Section Details START-->
                     <div class="offset-md-1 col-md-12 mt-5 mt-md-0">
