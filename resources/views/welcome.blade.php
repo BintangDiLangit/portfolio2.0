@@ -145,7 +145,7 @@
     <section id="home" class="home min-vh-100 d-flex">
         <!--Particle Background-->
         <div class="background-particle w-100 position-absolute top-0 left-0" id="particlebackground"
-            data-config="assets/pj-config.json">
+            data-config="{{ asset('assets/pj-config.json') }}">
         </div>
         <!--End of Particle Background-->
         <!--Home Container START-->
@@ -271,7 +271,7 @@
                             <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
                                     data-to="{{ $data['happy_clients'] }}" data-speed="1500">0</span><sup>+</sup>
                             </h3>
-                            <p class="fs-4 d-inline-block text-center text-md-left">Happy Clients</p>
+                            <p class="fs-4 d-inline-block text-center text-md-left">Client Testimonials</p>
                         </div>
                         <!--Facts Item END-->
                     </div>
@@ -404,7 +404,7 @@
             <!--Section Body START-->
             <div class="section-body">
                 <!--Masonry Grid Container START-->
-                <div class="row gy-4 grid">
+                <div class="row gy-4 grid" id="loadPortfolio">
                     <!--Masonry Grid Item START-->
                     @foreach ($portfolios as $item)
                         <div class="col-md-6 col-lg-3 grid-item">
@@ -424,6 +424,7 @@
                     @endforeach
                     <!--Masonry Grid Item END-->
                 </div>
+                <button id="loadMore" class="btn btn-secondary text-end">Load More</button>
                 <!--Masonry Grid Container END-->
             </div>
             <!--Section Body START-->
@@ -579,118 +580,6 @@
 
     </section>
     <!--Testimonials END-->
-    <!--FAQ START-->
-    {{-- <section id="faq">
-        <div class="container">
-            <div class="row">
-                <div class="offset-md-3 col-md-6">
-                    <!--Section Heading START-->
-                    <div class="heading text-center mb-5">
-                        <h2 class="fs-3 kayden-underline-left mb-5 fw-bold text-uppercase d-inline-block">FAQ</h2>
-                    </div>
-                    <!--Section Heading END-->
-                    <!--Accordion START-->
-                    <div class="accordion accordion-flush" id="faq_accordion">
-                        <!--Accordion ITEM START-->
-                        <div class="accordion-item">
-
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#accordion1" aria-expanded="true" aria-controls="accordion1">
-                                    What is Bootstrap 5
-                                </button>
-                            </h2>
-
-                            <div id="accordion1" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#faq_accordion">
-
-                                <div class="accordion-body text-secondary">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--Accordion ITEM END-->
-                        <!--Accordion ITEM START-->
-                        <div class="accordion-item">
-
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#accordion2" aria-expanded="true" aria-controls="accordion2">
-                                    How working kayden Template?
-                                </button>
-                            </h2>
-
-                            <div id="accordion2" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#faq_accordion">
-
-                                <div class="accordion-body">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--Accordion ITEM END-->
-                        <!--Accordion ITEM START-->
-                        <div class="accordion-item">
-
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#accordion3" aria-expanded="true" aria-controls="accordion3">
-                                    Why using Bootstrap 5?
-                                </button>
-                            </h2>
-
-                            <div id="accordion3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                data-bs-parent="#faq_accordion">
-
-                                <div class="accordion-body">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--Accordion ITEM END-->
-                        <!--Accordion ITEM START-->
-                        <div class="accordion-item">
-
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#accordion4" aria-expanded="true" aria-controls="accordion4">
-                                    How to control grids in this template?
-                                </button>
-                            </h2>
-
-                            <div id="accordion4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                data-bs-parent="#faq_accordion">
-
-                                <div class="accordion-body">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--Accordion ITEM END-->
-
-                    </div>
-                    <!--Accordion END-->
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!--FAQ END-->
     <!--Contact Us START-->
     <section id="contact" class="secondary-section">
         <div class="container">
@@ -864,6 +753,93 @@
     <!--JavaScript END-->
 
     <script src="assets/js/switcher.js"></script>
+
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        let msnry;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Masonry
+            msnry = new Masonry('#loadPortfolio', {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item', // or whatever suits your layout
+                percentPosition: true
+            });
+
+            let loadedPortfolios = 10;
+            const totalPortfolios = @json($totalPortfolios);
+
+            document.getElementById('loadMore').addEventListener('click', function() {
+                fetch(`/load-more-portfolios?skip=${loadedPortfolios}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let newItems = [];
+                        data.forEach(item => {
+                            let loadHtmlPorto = `
+                    <div class="col-md-6 col-lg-3 grid-item">
+                        <a href="/detail-portfolio/${item.id}" class="portfolio-item underline_animation text-reset">
+                            <div class="portfolio-thumbnail">
+                                <img src="{{ env('AWS_ENDPOINT') }}/{{ env('AWS_BUCKET') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" alt="">
+                            </div>
+                            <div class="portfolio-description my-3">
+                                <h3 class="fs-5 underline_text fw-bold d-inline-block">${item.title}</h3>
+                                <span class="d-block fw-light small-font-size">${item.description.substring(0, 15)}..</span>
+                            </div>
+                        </a>
+                    </div>`;
+
+                            const div = document.createElement('div');
+                            div.innerHTML = loadHtmlPorto.trim();
+                            const newItem = div.firstChild;
+                            document.getElementById('loadPortfolio').appendChild(newItem);
+                            newItems.push(newItem);
+                        });
+
+                        imagesLoaded(document.getElementById('loadPortfolio'), function() {
+                            msnry.appended(newItems);
+                            msnry.layout();
+                        });
+
+                        loadedPortfolios += data.length;
+
+                        if (loadedPortfolios >= totalPortfolios) {
+                            document.getElementById('loadMore').style.display = 'none';
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Fetch error: ', error);
+                    });
+            });
+        });
+
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this,
+                    args = arguments;
+                const later = function() {
+                    timeout = null;
+                    func.apply(context, args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Debounce the resize event
+        window.addEventListener('load', function() {
+            msnry.layout();
+        });
+
+        window.addEventListener('resize', debounce(function() {
+            msnry.destroy();
+            msnry = new Masonry('#loadPortfolio', {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                percentPosition: true
+            });
+        }, 150));
+    </script>
 </body>
 
 </html>

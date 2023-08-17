@@ -25,6 +25,8 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::get('/detail-portfolio/{id}', [WelcomeController::class, 'detailPortfolio'])->name('detail');
 Route::post('/email', [WelcomeController::class, 'sendEmail'])->name('send.email');
 
+Route::get('/load-more-portfolios', [WelcomeController::class, 'loadMore']);
+
 Route::get('sitemap', function () {
 
     $site = App::make('sitemap');

@@ -23,10 +23,11 @@ class WelcomeController extends Controller
         $data = $response->json()["data"][0];
         $skills = $responseSkill->json()["data"];
         $portfolios = $responsePortfolio->json()["data"];
+        $totalPortfolios = $responsePortfolio->json()["count"];
         $awardees = $responseAwardee->json()["data"];
         $cv = $responseCV->json()["data"];
         $testimonials = $responseTestimoni->json()["data"];
-        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees'));
+        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees', 'totalPortfolios'));
     }
 
     public function sendEmail(Request $request)
@@ -65,14 +66,13 @@ class WelcomeController extends Controller
         }
         return redirect(route('welcome'));
     }
-    public function detailAwardee($id)
+
+    public function loadMore(Request $request)
     {
-        $env = env('APP_URL_API');
-        $response = Http::post(env('APP_URL_API') . '/api/v1/awardee/' . $id);
-        if ($response->getStatusCode() == 200) {
-            return $response->json()["data"];
-            // return view('detailportfolio', compact('data', 'env'));
-        }
-        // return redirect(route('welcome'));
+        $skip = $request->input('skip', 0);
+        $responseLoadMore = Http::post(env('APP_URL_API') . '/api/v1/load-more-portfolios/' . $skip);
+        $portfolios = $responseLoadMore->json()["data"];
+        return response()->json($portfolios);
     }
+
 }
