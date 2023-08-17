@@ -19,12 +19,14 @@ class WelcomeController extends Controller
         $responsePortfolio = Http::post(env('APP_URL_API') . '/api/v1/all-portfolios');
         $responseCV = Http::post(env('APP_URL_API') . '/api/v1/cv');
         $responseTestimoni = Http::post(env('APP_URL_API') . '/api/v1/clients');
+        $responseAwardee = Http::post(env('APP_URL_API') . '/api/v1/all-awardees');
         $data = $response->json()["data"][0];
         $skills = $responseSkill->json()["data"];
         $portfolios = $responsePortfolio->json()["data"];
+        $awardees = $responseAwardee->json()["data"];
         $cv = $responseCV->json()["data"];
         $testimonials = $responseTestimoni->json()["data"];
-        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials'));
+        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees'));
     }
 
     public function sendEmail(Request $request)
@@ -62,5 +64,15 @@ class WelcomeController extends Controller
             return view('detailportfolio', compact('data', 'env'));
         }
         return redirect(route('welcome'));
+    }
+    public function detailAwardee($id)
+    {
+        $env = env('APP_URL_API');
+        $response = Http::post(env('APP_URL_API') . '/api/v1/awardee/' . $id);
+        if ($response->getStatusCode() == 200) {
+            return $response->json()["data"];
+            // return view('detailportfolio', compact('data', 'env'));
+        }
+        // return redirect(route('welcome'));
     }
 }

@@ -431,6 +431,58 @@
     </section>
     <!--Portfolio Section END-->
     <!--Education Section START-->
+
+    <section id="awardee" class="secondary-section">
+        <div class="container">
+            <!--Section Heading START-->
+            <div class="heading text-center mb-5">
+                <h2 class="fs-3 kayden-underline-left mb-5 fw-bold text-uppercase d-inline-block">Awardee</h2>
+            </div>
+            <!--Section Heading END-->
+            <!--Section Body START-->
+            <div class="section-body">
+                <div class="table-responsive">
+                    <!--Educational Table START-->
+                    <table class="table">
+                        <tbody>
+                            @foreach ($awardees as $awardee)
+                                <tr>
+                                    <td class="d-table-cell d-sm-none">
+                                        <div class="mb-3 fw-light">{{ $awardee['date'] }}</div>
+                                        <div class="mb-3 fw-bold">{{ $awardee['title'] }}</div>
+                                        <div></div>
+                                    </td>
+                                    <td class="w-25 d-none d-sm-table-cell">
+                                        <span class="fw-light fs-5">{{ $awardee['date'] }}</span>
+                                    </td>
+                                    <td class="w-50 d-none d-sm-table-cell">
+                                        <a href="{{ $awardee['link'] }}" class="underline_animation text-reset">
+                                            <span
+                                                class="fw-bold fs-5 underline_text d-inline-block">{{ $awardee['title'] }}</span>
+                                            <br>
+                                            <div class="portfolio-thumbnail">
+                                                <img src="{{ $env . '/storage/competition-images/' . $awardee['image'] }}"
+                                                    class="img-fluid img-grayTransition mt-5" alt=""
+                                                    width="60%">
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="w-25 d-none d-sm-table-cell">
+                                        <span class="fw-normal text-secondary">{{ $awardee['desc'] }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                    <!--Educational Table END-->
+                </div>
+            </div>
+            <!--Section Body END-->
+        </div>
+    </section>
+
     <section id="education" class="secondary-section">
         <div class="container">
             <!--Section Heading START-->
