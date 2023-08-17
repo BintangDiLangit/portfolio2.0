@@ -35,7 +35,6 @@
     <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
     <meta property="og:url" content="https://bintangmfhd.com/">
     <!--Favicon-->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_16x16.png">
     <!--Google Fonts-->
@@ -718,7 +717,6 @@
 
     <!--JavaScript START-->
     <!--Popper-->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <!--Bootstrap-->
     <script src="assets/js/bootstrap.min.js"></script>
