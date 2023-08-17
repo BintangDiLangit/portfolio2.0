@@ -144,9 +144,9 @@
     <!--Home Section START-->
     <section id="home" class="home min-vh-100 d-flex">
         <!--Particle Background-->
-        <div class="background-particle w-100 position-absolute top-0 left-0" id="particlebackground"
+        {{-- <div class="background-particle w-100 position-absolute top-0 left-0" id="particlebackground"
             data-config="{{ asset('assets/pj-config.json') }}">
-        </div>
+        </div> --}}
         <!--End of Particle Background-->
         <!--Home Container START-->
         <div class="container my-auto position-relative pe-none">
