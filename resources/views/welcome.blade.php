@@ -411,7 +411,7 @@
                                 <div class="portfolio-thumbnail">
                                     <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $item['image'] }}"
                                         class="img-fluid img-grayTransition"
-                                        alt="Bintang Miftaqul Huda - {{ $item['title'] }}" loading="lazy">
+                                        alt="Bintang Miftaqul Huda - {{ $item['title'] }}">
                                 </div>
                                 <div class="portfolio-description my-3">
                                     <h3 class="fs-5 underline_text fw-bold d-inline-block">{{ $item['title'] }}</h3>
@@ -764,7 +764,7 @@
                         <a href="/detail-portfolio/${item.id}" class="portfolio-item underline_animation text-reset">
                             <div class="portfolio-thumbnail">
                                 <img src="{{ env('AWS_ENDPOINT') }}/{{ env('AWS_BUCKET') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" 
-                                alt="Bintang Miftaqul Huda - ${item.title}" loading="lazy">
+                                alt="Bintang Miftaqul Huda - ${item.title}">
                             </div>
                             <div class="portfolio-description my-3">
                                 <h3 class="fs-5 underline_text fw-bold d-inline-block">${item.title}</h3>
