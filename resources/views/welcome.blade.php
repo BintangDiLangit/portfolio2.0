@@ -38,8 +38,8 @@
     <link rel="canonical" href="https://bintangmfhd.com/">
 
     <!--Favicon-->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png') }}">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -49,16 +49,16 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <!--AOS Animation Stylesheet-->
-    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!--Magnific Popup-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <!--OWL Carousel-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
 
     <!--Keyden Styelsheet with Bootstrap 5-->
-    <link rel="stylesheet" href="assets/css/kayden_10.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/kayden_10.css') }}">
 </head>
 
 <body data-offset="102">
@@ -669,36 +669,36 @@
                 <!--Social Links START-->
                 <ul class="social-links list-inline mb-4">
                     <li class="list-inline-item">
-                        <a href="#" title="facebook">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="{{ $data['instagram'] }}" title="Instagram">
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="linkedin">
+                        <a href="{{ $data['linkedin'] }}" title="Linkedin">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="pinterest">
-                            <i class="fab fa-pinterest-p"></i>
+                        <a href="{{ $data['medium'] }}" title="Medium">
+                            <i class="fab fa-medium"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="git">
-                            <i class="fab fa-git"></i>
+                        <a href="{{ $data['github'] }}" title="Github">
+                            <i class="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>
                 <!--Social Links END-->
                 <!--Copyright START-->
-                <p class="text-center m-0">2022 ©. bintangmfhd.</p>
+                <p class="text-center m-0">2023 ©. bintangmfhd.</p>
                 <!--Copyright END-->
             </div>
         </div>
     </footer>
     <!--Footer END-->
     <!--To TOP START-->
-    <a href="#" class="toTop d-inline" id="return-to-top">
+    <a href="#" class="toTop d-inline" id="return-to-top" aria-label="Return to Top">
         <i class="fas fa-chevron-up"></i>
     </a>
     <!--To TOP END-->
@@ -707,35 +707,35 @@
     <!--Popper-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <!--Bootstrap-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <!--JQuery-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <!--AOS Animations-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
     <!--Particle JS-->
-    <script src="assets/js/particles.min.js"></script>
+    <script src="{{ asset('assets/js/particles.min.js') }}"></script>
     <!--Jquery Easing -->
-    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
     <!--Jquery Appear -->
-    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.appear.min.js') }}"></script>
     <!--Kayden preloader -->
-    <script src="assets/js/preloader.js"></script>
+    <script src="{{ asset('assets/js/preloader.js') }}"></script>
     <!--Jquery Count To -->
-    <script src="assets/js/jquery.countTo.js"></script>
+    <script src="{{ asset('assets/js/jquery.countTo.js') }}"></script>
     <!--Masonry -->
-    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="{{ asset('assets/js/masonry.pkgd.min.js') }}"></script>
     <!--Jquery Magnific Popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <!--OWL Carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <!--Typed JS -->
-    <script src="assets/js/typed.min.js"></script>
+    <script src="{{ asset('assets/js/typed.min.js') }}"></script>
     <!--Kayden Alert -->
-    <script src="assets/js/alert.js"></script>
+    <script src="{{ asset('assets/js/alert.js') }}"></script>
     <!--Kayden Contact US -->
-    <script src="assets/js/contact.js"></script>
+    <script src="{{ asset('assets/js/contact.js') }}"></script>
     <!--Kayden Custom Script -->
-    <script src="assets/js/kayden.js"></script>
+    <script src="{{ asset('assets/js/kayden.js') }}"></script>
     <!--JavaScript END-->
 
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>

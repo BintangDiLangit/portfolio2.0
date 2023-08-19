@@ -60,9 +60,11 @@ class WelcomeController extends Controller
     {
         $env = env('APP_URL_API');
         $response = Http::post(env('APP_URL_API') . '/api/v1/portfolio/' . $id);
+        $responseSeo = Http::post(env('APP_URL_API') . '/api/v1/seo');
         if ($response->getStatusCode() == 200) {
             $data = $response->json()["data"];
-            return view('detailportfolio', compact('data', 'env'));
+            $dataSeo = $responseSeo->json()["data"][0];
+            return view('detailportfolio', compact('data', 'env', 'dataSeo'));
         }
         return redirect(route('welcome'));
     }
@@ -74,5 +76,4 @@ class WelcomeController extends Controller
         $portfolios = $responseLoadMore->json()["data"];
         return response()->json($portfolios);
     }
-
 }

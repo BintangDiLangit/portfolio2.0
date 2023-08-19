@@ -6,21 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bintang - Software Engineer</title>
-    <!--Usefull Meta-->
-    <meta name="description" content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
-    <meta name="keywords" content="bintangmfhd, resume, cv, vCard, portfolio, responsive, software engineer, programmer">
+
+    <!-- Basic Meta -->
+    <meta name="title" content="Bintang Miftaqul Huda - Software Engineer">
+    <meta name="description"
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bintang Miftaqul Huda - Software Engineer">
+    <meta property="og:description"
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
+    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
+    <meta property="og:url" content="https://bintangmfhd.com/">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bintangmfhd.com/">
+    <meta property="twitter:title" content="Bintang Miftaqul Huda - Software Engineer">
+    <meta property="twitter:description"
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
+    <meta property="twitter:image"
+        content="https://is3.cloudhost.id/portfolio123/storage/main_image/main_image64de2f2450993xw9d1.jpg">
+
+    <!-- SEO Meta -->
+    <meta name="keywords"
+        content="bintangmfhd, resume, cv, vCard, portfolio, software engineer, programmer, Bintang Miftaqul Huda">
     <meta name="robots" content="index, follow, noodp">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
-    <meta property="og:title" content="Bintang - Software Engineer ">
-    <meta property="og:description"
-        content="Bintang Miftaqul Huda, Professional portfolio, freelancers or software engineer.">
-    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
-    <meta property="og:url" content="https://bintangmfhd.com/">
+    <link rel="canonical" href="https://bintangmfhd.com/">
+
     <!--Favicon-->
-    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/favicon.svg') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon_32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon_16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png') }}">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -199,57 +218,42 @@
                 <!--Social Links START-->
                 <ul class="social-links list-inline mb-4">
                     <li class="list-inline-item">
-                        <a href="#" title="facebook">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="{{ $dataSeo['instagram'] }}" title="Instagram">
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="linkedin">
+                        <a href="{{ $dataSeo['linkedin'] }}" title="Linkedin">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="pinterest">
-                            <i class="fab fa-pinterest-p"></i>
+                        <a href="{{ $dataSeo['medium'] }}" title="Medium">
+                            <i class="fab fa-medium"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" title="git">
-                            <i class="fab fa-git"></i>
+                        <a href="{{ $dataSeo['github'] }}" title="Github">
+                            <i class="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>
                 <!--Social Links END-->
                 <!--Copyright START-->
-                <p class="text-center m-0">2022 ©. bintangmfhd.</p>
+                <p class="text-center m-0">2023 ©. bintangmfhd.</p>
                 <!--Copyright END-->
             </div>
         </div>
     </footer>
     <!--Footer END-->
     <!--To TOP START-->
-    <a href="#" class="toTop d-inline" id="return-to-top">
+    <a href="#" class="toTop d-inline" id="return-to-top" aria-label="Return to Top">
         <i class="fas fa-chevron-up"></i>
     </a>
     <!--To TOP END-->
 
-    <!--Style switcher START-->
-    <div id="color-switcher" class="d-flex flex-row">
-        <div class="switcher-area">
-            <h3 class="mb-4 mt-2">Choose your color</h3>
-            <ul class="switcher-list">
-
-            </ul>
-        </div>
-        <div class="switcher-button">
-            <i class="fas fa-cog"></i>
-        </div>
-    </div>
-    <!--Style switcher END-->
-
     <!--JavaScript START-->
     <!--Popper-->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <!--Bootstrap-->
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
