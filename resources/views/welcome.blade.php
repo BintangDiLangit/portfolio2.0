@@ -6,34 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bintang - Software Engineer</title>
-    <!--Usefull Meta-->
 
-    <meta name="title" content="Bintang Miftaqul Huda">
+    <!-- Basic Meta -->
+    <meta name="title" content="Bintang Miftaqul Huda - Software Engineer">
     <meta name="description"
-        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Bintang Miftaqul Huda - Software Engineer">
     <meta property="og:description"
-        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
+    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
+    <meta property="og:url" content="https://bintangmfhd.com/">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
-    <meta property="twitter:title" content="Bintang Miftaqul Huda">
+    <meta property="twitter:url" content="https://bintangmfhd.com/">
+    <meta property="twitter:title" content="Bintang Miftaqul Huda - Software Engineer">
     <meta property="twitter:description"
-        content="Bintang Miftaqul Huda, IT Specialist, Professional, freelancers and software engineer.">
+        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
     <meta property="twitter:image"
-        content="https://main.bintangmfhd.com/storage/main_image/main_image6389a6f30d271y9vel.jpg">
+        content="https://is3.cloudhost.id/portfolio123/storage/main_image/main_image64de2f2450993xw9d1.jpg">
 
+    <!-- SEO Meta -->
     <meta name="keywords"
-        content="bintangmfhd, resume, cv, vCard, portfolio, responsive, software engineer, programmer, Bintang Miftaqul Huda">
+        content="bintangmfhd, resume, cv, vCard, portfolio, software engineer, programmer, Bintang Miftaqul Huda">
     <meta name="robots" content="index, follow, noodp">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
-    <meta property="og:title" content="Bintang - Software Engineer">
-    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
-    <meta property="og:url" content="https://bintangmfhd.com/">
+    <link rel="canonical" href="https://bintangmfhd.com/">
+
     <!--Favicon-->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_16x16.png">
@@ -156,7 +159,8 @@
                             <div class="about-image h-100 w-100 d-flex align-items-center">
                                 <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/main_image/' . $data['main_image'] }}"
                                     class="kayden_morph_animation img-fluid kayden-shadow fit-cover fit-left-top"
-                                    alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800">
+                                    alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800"
+                                    alt="Bintang Miftaqul Huda" loading="lazy">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -201,7 +205,7 @@
                     <div class="offset-md-1 col-md-5 mt-5 mt-md-0">
                         <div class="h-100 d-flex align-items-center justify-content-center">
                             <div class="about-details">
-                                <h2 class="fs-3 fw-bold mb-5">I'm {{ $data['name'] }}</h2>
+                                <h1 class="fs-3 fw-bold mb-5">{{ $data['name'] }}</h1>
                                 <p class="text-secondary mb-5">{{ $data['introducing'] }}</p>
                                 <!--Social Links START-->
                                 <ul class="social-links list-inline mb-5">
@@ -411,7 +415,8 @@
                                 class="portfolio-item underline_animation text-reset">
                                 <div class="portfolio-thumbnail">
                                     <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $item['image'] }}"
-                                        class="img-fluid img-grayTransition" alt="">
+                                        class="img-fluid img-grayTransition"
+                                        alt="Bintang Miftaqul Huda - {{ $item['title'] }}" loading="lazy">
                                 </div>
                                 <div class="portfolio-description my-3">
                                     <h3 class="fs-5 underline_text fw-bold d-inline-block">{{ $item['title'] }}</h3>
@@ -462,8 +467,9 @@
                                             <br>
                                             <div class="portfolio-thumbnail">
                                                 <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/competition-images/' . $awardee['image'] }}"
-                                                    class="img-fluid img-grayTransition mt-5" alt=""
-                                                    width="60%">
+                                                    class="img-fluid img-grayTransition mt-5"
+                                                    alt="Bintang Miftaqul Huda - {{ $awardee['title'] }}"
+                                                    loading="lazy" width="60%">
                                             </div>
                                         </a>
                                     </td>
@@ -561,7 +567,8 @@
                                         <div
                                             class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
                                             <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/client-images/' . $item['photo'] }}"
-                                                class="kayden-shadow rounded-3 w-auto" alt=""
+                                                class="kayden-shadow rounded-3 w-auto"
+                                                alt="Bintang Miftaqul Huda - {{ $item['name'] }}" loading="lazy"
                                                 height="300rem">
                                         </div>
                                     </div>
@@ -701,20 +708,6 @@
     </a>
     <!--To TOP END-->
 
-    <!--Style switcher START-->
-    <div id="color-switcher" class="d-flex flex-row">
-        <div class="switcher-area">
-            <h3 class="mb-4 mt-2">Choose your color</h3>
-            <ul class="switcher-list">
-
-            </ul>
-        </div>
-        <div class="switcher-button">
-            <i class="fas fa-cog"></i>
-        </div>
-    </div>
-    <!--Style switcher END-->
-
     <!--JavaScript START-->
     <!--Popper-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -777,7 +770,8 @@
                     <div class="col-md-6 col-lg-3 grid-item">
                         <a href="/detail-portfolio/${item.id}" class="portfolio-item underline_animation text-reset">
                             <div class="portfolio-thumbnail">
-                                <img src="{{ env('AWS_ENDPOINT') }}/{{ env('AWS_BUCKET') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" alt="">
+                                <img src="{{ env('AWS_ENDPOINT') }}/{{ env('AWS_BUCKET') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" 
+                                alt="Bintang Miftaqul Huda - ${item.title}" loading="lazy">
                             </div>
                             <div class="portfolio-description my-3">
                                 <h3 class="fs-5 underline_text fw-bold d-inline-block">${item.title}</h3>
