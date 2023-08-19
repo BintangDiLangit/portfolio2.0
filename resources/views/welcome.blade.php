@@ -145,11 +145,6 @@
     <!--Off Canvas END-->
     <!--Home Section START-->
     <section id="home" class="home min-vh-100 d-flex">
-        <!--Particle Background-->
-        {{-- <div class="background-particle w-100 position-absolute top-0 left-0" id="particlebackground"
-            data-config="{{ asset('assets/pj-config.json') }}">
-        </div> --}}
-        <!--End of Particle Background-->
         <!--Home Container START-->
         <div class="container my-auto position-relative pe-none">
             <div class="row">
@@ -742,8 +737,6 @@
     <!--Kayden Custom Script -->
     <script src="assets/js/kayden.js"></script>
     <!--JavaScript END-->
-
-    <script src="assets/js/switcher.js"></script>
 
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
