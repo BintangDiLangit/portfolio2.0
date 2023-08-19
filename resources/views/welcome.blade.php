@@ -17,7 +17,7 @@
     <meta property="og:title" content="Bintang Miftaqul Huda - Software Engineer">
     <meta property="og:description"
         content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
-    <meta property="og:image" content="https://bintangmfhd.com/assets/images/preview.png">
+    <meta property="og:image" content="https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp">
     <meta property="og:url" content="https://bintangmfhd.com/">
 
     <!-- Twitter -->
