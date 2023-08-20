@@ -226,8 +226,8 @@
                                     </li>
                                 </ul>
                                 <!--Social Links END-->
-                                <a href="{{ $env . '/file-cv/' . $cv['path'] }}" class="btn btn-outline-primary"
-                                    title="Download CV">Download CV</a>
+                                <a href="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/file-cv/' . $cv['path'] }}"
+                                    class="btn btn-outline-primary" title="Download CV">Download CV</a>
                             </div>
                         </div>
                     </div>
