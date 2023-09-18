@@ -751,7 +751,7 @@
             });
 
             let loadedPortfolios = 10;
-            const totalPortfolios = @json($totalPortfolios);
+            const totalPortfolios = @json($data['project_done']);
 
             document.getElementById('loadMore').addEventListener('click', function() {
                 fetch(`/load-more-portfolios?skip=${loadedPortfolios}`)
