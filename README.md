@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/BintangDiLangit/portfolio2.0">
-    <img src="images/logo.png](https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp" alt="Logo" width="80" height="80">
+    <img src="https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ReadME Generator</h3>
