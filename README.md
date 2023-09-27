@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/BintangDiLangit/portfolio2.0">
-    <img src="https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp" alt="Logo" width="80" height="80">
+    <img src="https://avatars.githubusercontent.com/u/56743346?v=4" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Personal Portfolio</h3>
@@ -21,7 +21,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp)
 
 There are many great ReadME templates available on GitHub, however, I struggled to find any ReadME generators. Throughout my open source project contributions, I've had to spend numerous hours editing README files which I could've spent developing instead. This paired with me often forgetting to change links, titles and sections made me look for a README generator.
 
