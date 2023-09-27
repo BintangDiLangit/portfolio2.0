@@ -4,7 +4,7 @@
     <img src="https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">ReadME Generator</h3>
+  <h3 align="center">Personal Portfolio</h3>
 
   <p align="center">
     An Awesome Personal Portfolio V2
@@ -18,22 +18,6 @@
 </p>
 
 ![Downloads](https://img.shields.io/github/downloads/ShaanCoding/ReadME-Generator/total) ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) [![Discord](https://img.shields.io/discord/199663269106024449)](https://discord.gg/6Kf422a)
-
-## Table Of Contents
-
-- [Table Of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-  - [Creating A Pull Request](#creating-a-pull-request)
-- [License](#license)
-- [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
