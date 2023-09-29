@@ -20,14 +20,15 @@ class WelcomeController extends Controller
         $responseCV = Http::post(env('APP_URL_API') . '/api/v1/cv');
         $responseTestimoni = Http::post(env('APP_URL_API') . '/api/v1/clients');
         $responseAwardee = Http::post(env('APP_URL_API') . '/api/v1/all-awardees');
-        $data = $response->json()["data"][0];
+        $dataSeo = $response->json()["data"][0];
         $skills = $responseSkill->json()["data"];
         $portfolios = $responsePortfolio->json()["data"];
         $totalPortfolios = $responsePortfolio->json()["count"];
         $awardees = $responseAwardee->json()["data"];
         $cv = $responseCV->json()["data"];
         $testimonials = $responseTestimoni->json()["data"];
-        return view('welcome', compact('data', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees', 'totalPortfolios'));
+        
+        return view('welcome', compact('dataSeo', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees', 'totalPortfolios'));
     }
 
     public function sendEmail(Request $request)

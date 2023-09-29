@@ -2,146 +2,20 @@
 <html lang="en" data-color="color13">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @include('components/head')
     <title>Bintang - Software Engineer</title>
-
-    <!-- Basic Meta -->
-    <meta name="title" content="Bintang Miftaqul Huda - Software Engineer">
-    <meta name="description"
-        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bintang Miftaqul Huda - Software Engineer">
-    <meta property="og:description"
-        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
-    <meta property="og:image" content="https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp">
-    <meta property="og:url" content="https://bintangmfhd.com/">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bintangmfhd.com/">
-    <meta property="twitter:title" content="Bintang Miftaqul Huda - Software Engineer">
-    <meta property="twitter:description"
-        content="Bintang Miftaqul Huda: IT Specialist, Professional Software Engineer, and Freelancer. Explore my portfolio and services.">
-    <meta property="twitter:image"
-        content="https://is3.cloudhost.id/portfolio123/storage/main_image/main_image64de2f2450993xw9d1.jpg">
-
-    <!-- SEO Meta -->
-    <meta name="keywords"
-        content="bintangmfhd, resume, cv, vCard, portfolio, software engineer, programmer, Bintang Miftaqul Huda">
-    <meta name="robots" content="index, follow, noodp">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="notranslate">
-    <link rel="canonical" href="https://bintangmfhd.com/">
-
-    <!--Favicon-->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png') }}">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <!--AOS Animation Stylesheet-->
-    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
-    <!--Magnific Popup-->
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-    <!--OWL Carousel-->
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-
-    <!--Keyden Styelsheet with Bootstrap 5-->
-    <link rel="stylesheet" href="{{ asset('assets/css/kayden_10.css') }}">
 </head>
 
 <body data-offset="102">
     <!--PRELOADER START-->
-    <div id="preloader">
-        <div class="text-center w-100">
-            <div class="loader"></div>
-        </div>
-    </div>
+    @include('components/preloader')
     <!--PRELOADER END-->
     <!--Header START-->
-    <header class="kayden-header sticky-top">
-        <div class="header-inside transparent_header">
-            <div class="d-flex flex-row justify-content-between align-items-center">
-                <!--Header Toggler START-->
-                <div class="kayden-menu-toggler">
-                    <a class="kayden-toggler text-reset" data-bs-toggle="offcanvas" href="#kaydenOffCanvas"
-                        role="button" aria-controls="kaydenOffCanvas">
-                        <div class="kt-r">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="kt-t">
-                            MENU
-                        </div>
-                    </a>
-                </div>
-                <!--Header Toggler END-->
-                <!--Header Info START-->
-                <div class="kayden-nav-meta fs-5 fw-bold d-none d-sm-block text-end">
-                    <a href="#" class="text-reset">{{ $data['phone_number'] }}</a>
-                </div>
-                <!--Header Info END-->
-            </div>
-        </div>
-    </header>
+    @include('components/header')
     <!--Header END-->
     <!--Off Canvas START-->
-    <div class="offcanvas offcanvas-start" id="kaydenOffCanvas">
-        <!--Off Canvas Header START-->
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <!--Off Canvas Header END-->
-        <!--Off Canvas Body START-->
-        <div class="offcanvas-body">
-            <div class="kayden-offcanvas-nav-container d-flex flex-column justify-content-center align-items-center">
-                <!--Off Canvas Navigation START-->
-                <ul class="kayden-offcanvas-nav list-inline">
-                    <li class="py-3">
-                        <a href="#home"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">Home</a>
-                    </li>
-                    <li class="py-3">
-                        <a href="#about"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">About</a>
-                    </li>
-                    <li class="py-3">
-                        <a href="#portfolio"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">Portfolio</a>
-                    </li>
-                    {{-- <li class="py-3">
-                        <a href="#faq"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">FAQ</a>
-                    </li> --}}
-                    <li class="py-3">
-                        <a href="#contact"
-                            class="kayden_scrollspy underline_animation underline_text text-reset fs-4 fw-bold"
-                            data-bs-dismiss="offcanvas">Contact</a>
-                    </li>
-                </ul>
-                <!--Off Canvas Navigation END-->
-            </div>
-        </div>
-        <!--Off Canvas Body END-->
-    </div>
+    @include('components/off_canvas')
     <!--Off Canvas END-->
     <!--Home Section START-->
     <section id="home" class="home min-vh-100 d-flex">
@@ -152,7 +26,7 @@
                     <div class="row gy-5">
                         <div class="col-md-6">
                             <div class="about-image h-100 w-100 d-flex align-items-center">
-                                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/main_image/' . $data['main_image'] }}"
+                                <img src="{{ env('AWS_ENDPOINT') . '/storage/main_image/' . $dataSeo['main_image'] }}"
                                     class="kayden_morph_animation img-fluid kayden-shadow fit-cover fit-left-top"
                                     alt="bintangmfhd Picture" data-aos="zoom-in" data-aos-duration="800"
                                     alt="Bintang Miftaqul Huda" loading="lazy">
@@ -162,9 +36,9 @@
                             <div class="text-center text-sm-end w-100 h-100 d-flex align-items-center">
                                 <div class="w-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                                     <p class="welcome_text fs-4"><span class="typed_text"
-                                            data-options="{{ $data['job_title'] }}"></span></p>
+                                            data-options="{{ $dataSeo['job_title'] }}"></span></p>
                                     <h1 class="fs-2 fw-bold d-inline-block typed_text mb-5">I'm
-                                        {{ strtok($data['name'], ' ') }}
+                                        {{ strtok($dataSeo['name'], ' ') }}
                                     </h1>
                                     <div class="home_button_area">
                                         <a href="#portfolio" class="btn btn-primary kayden_scrollspy">My Portfolio</a>
@@ -200,33 +74,33 @@
                     <div class="offset-md-1 col-md-5 mt-5 mt-md-0">
                         <div class="h-100 d-flex align-items-center justify-content-center">
                             <div class="about-details">
-                                <h1 class="fs-3 fw-bold mb-5">{{ $data['name'] }}</h1>
-                                <p class="text-secondary mb-5">{{ $data['introducing'] }}</p>
+                                <h1 class="fs-3 fw-bold mb-5">{{ $dataSeo['name'] }}</h1>
+                                <p class="text-secondary mb-5">{{ $dataSeo['introducing'] }}</p>
                                 <!--Social Links START-->
                                 <ul class="social-links list-inline mb-5">
                                     <li class="list-inline-item">
-                                        <a href="{{ $data['instagram'] }}" title="instagram">
+                                        <a href="{{ $dataSeo['instagram'] }}" title="instagram">
                                             <i class="fab fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $data['linkedin'] }}" title="linkedin">
+                                        <a href="{{ $dataSeo['linkedin'] }}" title="linkedin">
                                             <i class="fab fa-linkedin-in"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $data['medium'] }}" title="medium">
+                                        <a href="{{ $dataSeo['medium'] }}" title="medium">
                                             <i class="fab fa-medium"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $data['github'] }}" title="github">
+                                        <a href="{{ $dataSeo['github'] }}" title="github">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </li>
                                 </ul>
                                 <!--Social Links END-->
-                                <a href="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/file-cv/' . $cv['path'] }}"
+                                <a href="{{ env('AWS_ENDPOINT') . '/storage/file-cv/' . $cv['path'] }}"
                                     class="btn btn-outline-primary" title="Download CV">Download CV</a>
                             </div>
                         </div>
@@ -242,8 +116,8 @@
                                     <label class="mb-3 fs-6">{{ $item['skill_name'] }}</label>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-loadAnimation" data-percent="100"
-                                            style="width: 0%;" role="progressbar" aria-valuenow="100"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                            style="width: 0%;" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             @endforeach
@@ -257,7 +131,7 @@
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
                             <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
-                                    data-to="{{ $data['years_experience'] }}" data-speed="1500">0</span><sup>+</sup>
+                                    data-to="{{ $dataSeo['years_experience'] }}" data-speed="1500">0</span><sup>+</sup>
                             </h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Years Experience</p>
                         </div>
@@ -267,7 +141,7 @@
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
                             <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
-                                    data-to="{{ $data['happy_clients'] }}" data-speed="1500">0</span><sup>+</sup>
+                                    data-to="{{ $dataSeo['happy_clients'] }}" data-speed="1500">0</span><sup>+</sup>
                             </h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Client Testimonials</p>
                         </div>
@@ -277,7 +151,7 @@
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
                             <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
-                                    data-to="{{ $data['winning_competitions'] }}" data-speed="1500">0</span></h3>
+                                    data-to="{{ $dataSeo['winning_competitions'] }}" data-speed="1500">0</span></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Winning Competitions</p>
                         </div>
                         <!--Facts Item END-->
@@ -286,7 +160,7 @@
                         <!--Facts Item START-->
                         <div class="fact d-flex flex-column align-items-center align-items-center">
                             <h3 class="fs-2 d-inline-block"><span class="tmcounter" data-from="0"
-                                    data-to="{{ $data['project_done'] }}" data-speed="1500">0</span></h3>
+                                    data-to="{{ $dataSeo['project_done'] }}" data-speed="1500">0</span></h3>
                             <p class="fs-4 d-inline-block text-center text-md-left">Projects done</p>
                         </div>
                         <!--Facts Item END-->
@@ -409,7 +283,7 @@
                             <a href="/detail-portfolio/{{ $item['id'] }}" {{-- class="portfolio-item portfolio-ajax underline_animation text-reset"> --}}
                                 class="portfolio-item underline_animation text-reset">
                                 <div class="portfolio-thumbnail">
-                                    <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/portofolio-images/' . $item['image'] }}"
+                                    <img src="{{ env('AWS_ENDPOINT') . '/storage/portofolio-images/' . $item['image'] }}"
                                         class="img-fluid img-grayTransition"
                                         alt="Bintang Miftaqul Huda - {{ $item['title'] }}">
                                 </div>
@@ -461,7 +335,7 @@
                                                 class="fw-bold fs-5 underline_text d-inline-block">{{ $awardee['title'] }}</span>
                                             <br>
                                             <div class="portfolio-thumbnail">
-                                                <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/competition-images/' . $awardee['image'] }}"
+                                                <img src="{{ env('AWS_ENDPOINT') . '/storage/competition-images/' . $awardee['image'] }}"
                                                     class="img-fluid img-grayTransition mt-5"
                                                     alt="Bintang Miftaqul Huda - {{ $awardee['title'] }}"
                                                     loading="lazy" width="60%">
@@ -561,7 +435,7 @@
                                     <div class="col-md-6 order-1 order-md-2">
                                         <div
                                             class="testimonial_thumbnail d-flex justify-content-start justify-content-md-end">
-                                            <img src="{{ env('AWS_ENDPOINT') . '/' . env('AWS_BUCKET') . '/storage/client-images/' . $item['photo'] }}"
+                                            <img src="{{ env('AWS_ENDPOINT') . '/storage/client-images/' . $item['photo'] }}"
                                                 class="kayden-shadow rounded-3 w-auto"
                                                 alt="Bintang Miftaqul Huda - {{ $item['name'] }}" loading="lazy"
                                                 height="300rem">
@@ -600,9 +474,9 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary">
-                                    <a href="mailto:{{ $data['email'] }}" class="text-reset">
+                                    <a href="mailto:{{ $dataSeo['email'] }}" class="text-reset">
                                         <span class="__cf_email__"
-                                            data-cfemail="741f150d10111a34110c15190418115a171b19">{{ $data['email'] }}</span>
+                                            data-cfemail="741f150d10111a34110c15190418115a171b19">{{ $dataSeo['email'] }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -613,7 +487,7 @@
                                     <i class="fas fa-map-marked-alt"></i>
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary text-reset">
-                                    {{ $data['address'] }}
+                                    {{ $dataSeo['address'] }}
                                 </div>
                             </div>
                             <!--Contact Details END-->
@@ -624,7 +498,7 @@
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary">
                                     <a href="#" class="text-reset">
-                                        {{ $data['phone_number'] }}
+                                        {{ $dataSeo['phone_number'] }}
                                     </a>
                                 </div>
                             </div>
@@ -663,79 +537,14 @@
     </section>
     <!--Contact Us END-->
     <!--Footer START-->
-    <footer class="kayden-footer py-4">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center py-3">
-                <!--Social Links START-->
-                <ul class="social-links list-inline mb-4">
-                    <li class="list-inline-item">
-                        <a href="{{ $data['instagram'] }}" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="{{ $data['linkedin'] }}" title="Linkedin">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="{{ $data['medium'] }}" title="Medium">
-                            <i class="fab fa-medium"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="{{ $data['github'] }}" title="Github">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!--Social Links END-->
-                <!--Copyright START-->
-                <p class="text-center m-0">2023 ©. bintangmfhd.</p>
-                <!--Copyright END-->
-            </div>
-        </div>
-    </footer>
+    @include('components/footer')
     <!--Footer END-->
     <!--To TOP START-->
-    <a href="#" class="toTop d-inline" id="return-to-top" aria-label="Return to Top">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+    @include('components/to_top')
     <!--To TOP END-->
 
     <!--JavaScript START-->
-    <!--Popper-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <!--Bootstrap-->
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <!--JQuery-->
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <!--AOS Animations-->
-    <script src="{{ asset('assets/js/aos.js') }}"></script>
-    <!--Particle JS-->
-    <script src="{{ asset('assets/js/particles.min.js') }}"></script>
-    <!--Jquery Easing -->
-    <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
-    <!--Jquery Appear -->
-    <script src="{{ asset('assets/js/jquery.appear.min.js') }}"></script>
-    <!--Kayden preloader -->
-    <script src="{{ asset('assets/js/preloader.js') }}"></script>
-    <!--Jquery Count To -->
-    <script src="{{ asset('assets/js/jquery.countTo.js') }}"></script>
-    <!--Masonry -->
-    <script src="{{ asset('assets/js/masonry.pkgd.min.js') }}"></script>
-    <!--Jquery Magnific Popup -->
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <!--OWL Carousel -->
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <!--Typed JS -->
-    <script src="{{ asset('assets/js/typed.min.js') }}"></script>
-    <!--Kayden Alert -->
-    <script src="{{ asset('assets/js/alert.js') }}"></script>
-    <!--Kayden Contact US -->
-    <script src="{{ asset('assets/js/contact.js') }}"></script>
-    <!--Kayden Custom Script -->
-    <script src="{{ asset('assets/js/kayden.js') }}"></script>
+    @include('components.script')
     <!--JavaScript END-->
 
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
@@ -751,7 +560,7 @@
             });
 
             let loadedPortfolios = 10;
-            const totalPortfolios = @json($data['project_done']);
+            const totalPortfolios = @json($dataSeo['project_done']);
 
             document.getElementById('loadMore').addEventListener('click', function() {
                 fetch(`/load-more-portfolios?skip=${loadedPortfolios}`)

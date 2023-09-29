@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
@@ -41,3 +42,5 @@ Route::get('sitemap', function () {
 
     $site->store('xml', 'sitemap');
 });
+
+Route::get('/article', [ArticleController::class, 'all'])->name('articles');
