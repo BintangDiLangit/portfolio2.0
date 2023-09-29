@@ -572,7 +572,7 @@
                     <div class="col-md-6 col-lg-3 grid-item">
                         <a href="/detail-portfolio/${item.id}" class="portfolio-item underline_animation text-reset">
                             <div class="portfolio-thumbnail">
-                                <img src="{{ env('AWS_ENDPOINT') }}/{{ env('AWS_BUCKET') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" 
+                                <img src="{{ env('AWS_ENDPOINT') }}/storage/portofolio-images/${item.image}" class="img-fluid img-grayTransition" 
                                 alt="Bintang Miftaqul Huda - ${item.title}">
                             </div>
                             <div class="portfolio-description my-3">
