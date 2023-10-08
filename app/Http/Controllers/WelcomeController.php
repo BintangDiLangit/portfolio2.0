@@ -8,26 +8,37 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use GuzzleHttp\Client;
 
 class WelcomeController extends Controller
 {
     public function index()
     {
+        $client = new Client();
+
+        $response = $client->request('POST', config('services.main_api.base_uri') . '/api/v1/seo');
+        $dataSeo = json_decode($response->getBody(), true)['data'][0];
+
+        $responseSkill = $client->request('POST', env('APP_URL_API') . '/api/v1/skills');
+        $skills = json_decode($responseSkill->getBody(), true)['data'];
+
+        $responsePortfolio = $client->request('POST', env('APP_URL_API') . '/api/v1/all-portfolios');
+        $portfolios = json_decode($responsePortfolio->getBody(), true)['data'];
+
+        $responseCV = $client->request('POST', env('APP_URL_API') . '/api/v1/cv');
+        $cv = json_decode($responseCV->getBody(), true)['data'];
+
+        $responseTestimoni = $client->request('POST', env('APP_URL_API') . '/api/v1/clients');
+        $testimonials = json_decode($responseTestimoni->getBody(), true)['data'];
+
+        $responseAwardee = $client->request('POST', env('APP_URL_API') . '/api/v1/all-awardees');
+        $awardees = json_decode($responseAwardee->getBody(), true)['data'];
+
+        $responseTotalPortfolios = $client->request('POST', env('APP_URL_API') . '/api/v1/all-portfolios');
+        $totalPortfolios = json_decode($responseTotalPortfolios->getBody(), true)['count'];
+
         $env = env('APP_URL_API');
-        $response = Http::post(config('services.main_api.base_uri') . '/api/v1/seo');
-        $responseSkill = Http::post(env('APP_URL_API') . '/api/v1/skills');
-        $responsePortfolio = Http::post(env('APP_URL_API') . '/api/v1/all-portfolios');
-        $responseCV = Http::post(env('APP_URL_API') . '/api/v1/cv');
-        $responseTestimoni = Http::post(env('APP_URL_API') . '/api/v1/clients');
-        $responseAwardee = Http::post(env('APP_URL_API') . '/api/v1/all-awardees');
-        $dataSeo = $response->json()["data"][0];
-        $skills = $responseSkill->json()["data"];
-        $portfolios = $responsePortfolio->json()["data"];
-        $totalPortfolios = $responsePortfolio->json()["count"];
-        $awardees = $responseAwardee->json()["data"];
-        $cv = $responseCV->json()["data"];
-        $testimonials = $responseTestimoni->json()["data"];
-        
+
         return view('welcome', compact('dataSeo', 'env', 'skills', 'portfolios', 'cv', 'testimonials', 'awardees', 'totalPortfolios'));
     }
 
