@@ -14,7 +14,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $env = env('APP_URL_API');
-        $response = Http::post(env('APP_URL_API') . '/api/v1/seo');
+        $response = Http::post(config('services.main_api.base_uri') . '/api/v1/seo');
         $responseSkill = Http::post(env('APP_URL_API') . '/api/v1/skills');
         $responsePortfolio = Http::post(env('APP_URL_API') . '/api/v1/all-portfolios');
         $responseCV = Http::post(env('APP_URL_API') . '/api/v1/cv');

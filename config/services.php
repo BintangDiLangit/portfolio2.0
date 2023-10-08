@@ -29,5 +29,8 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'main_api' => [
+        'base_uri' => env('APP_URL_API', 'https://main.bintangmfhd.com'),
+    ],
 
 ];
