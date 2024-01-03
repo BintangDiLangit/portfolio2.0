@@ -475,8 +475,7 @@
                                 </div>
                                 <div class="cd-info fs-5 font-family-secondary">
                                     <a href="mailto:{{ $dataSeo['email'] }}" class="text-reset">
-                                        <span class="__cf_email__"
-                                            data-cfemail="741f150d10111a34110c15190418115a171b19">{{ $dataSeo['email'] }}</span>
+                                        <span class="__cf_email__">{{ $dataSeo['email'] }}</span>
                                     </a>
                                 </div>
                             </div>
