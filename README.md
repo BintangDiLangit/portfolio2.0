@@ -24,3 +24,12 @@
 ![Screen Shot](https://is3.cloudhost.id/portfolio123/storage/seo/64e0bb014746fpueucwmxjg.webp)
 
 Personal Project (Portfolio) | Build with Laravel, Javascript, Object Storage, API
+.
+.
+.
+.
+.
+.
+.
+.
+.
